@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    h1.
+         #{title}
+    ul
+        - each article, i in articles
+            li
+                = article.text
+                = article._id
+                form(action='/articles/#{article._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                    input(type='hidden',value='DELETE',name='_method')
+                    button(type='submit').
+                        Delete
+                p 
+                    a(href='/articles/#{article._id}/edit') Edit
+                p
+                    a(href='/articles/#{article._id}') Show

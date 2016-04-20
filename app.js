@@ -13,6 +13,9 @@ var db = require('./models/db');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var updates = require('./model/updates');
+var articles = require('./model/articles'); 
+
 var app = express();
 
 // view engine setup
@@ -35,6 +38,9 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/users', users);
+app.use('/updates', updatesController);
+app.use('/articles', articlesController);
 
 // passport config
 var Account = require('./models/account');

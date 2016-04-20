@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    form#formAddUpdate(name="addupdate",method="post",action="/updates")
+        p Text: 
+            input#inputText(type="text", placeholder="type text here", name="text")
+        p
+            button#btnSubmit(type="submit") submit
