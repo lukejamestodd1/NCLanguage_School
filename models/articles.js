@@ -4,4 +4,4 @@ var articleSchema = new mongoose.Schema({
   text: String,
   image_url: String
 });
-mongoose.model('Article', articleSchema);
+module.exports = mongoose.model('Article', articleSchema);

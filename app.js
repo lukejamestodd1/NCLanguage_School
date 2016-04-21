@@ -11,10 +11,11 @@ var LocalStrategy = require('passport-local').Strategy;
 
 var db = require('./models/db');
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var articlesController = require('./routes/articlesController');
+var updatesController = require('./routes/updatesController');
 
-var updates = require('./model/updates');
-var articles = require('./model/articles'); 
+var updates = require('./models/updates');
+var articles = require('./models/articles'); 
 
 var app = express();
 
@@ -38,7 +39,6 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
 app.use('/updates', updatesController);
 app.use('/articles', articlesController);
 
@@ -48,8 +48,8 @@ passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
-// mongoose
-mongoose.connect('mongodb://localhost/newcentury');
+// mongoose - only need to connect once. this appears already in the 'DB' file
+// mongoose.connect('mongodb://localhost/newcentury');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
