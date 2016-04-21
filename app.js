@@ -14,7 +14,7 @@ var articlesController = require('./routes/articlesController');
 var updatesController = require('./routes/updatesController');
 
 var updates = require('./models/updates');
-var articles = require('./models/articles'); 
+var articles = require('./models/articles');
 
 var app = express();
 
@@ -37,9 +37,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', routes);
 app.use('/updates', updatesController);
 app.use('/articles', articlesController);
+
 
 // passport config
 var Account = require('./models/account');
@@ -47,7 +49,6 @@ passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
-refs/remotes/origin/master
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

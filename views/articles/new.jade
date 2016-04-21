@@ -4,11 +4,20 @@ block content
     h1.
         #{title}
     form#formAddArticle(name="addarticle",method="post",action="/articles")
-        p Title: 
+        p Title:
             input#inputTitle(type="text", placeholder="enter title", name="title")
         p Text:
             input#inputText(type="text", placeholder="enter article contents here", name="text")
-        p Image url: 
-            input#inputImage_url(type="text", name="image_url")
+        p Image 1 url:
+            input#inputImage_url(type="text", name="image1_url")
+        p Image 2 url:
+            input#inputImage_url(type="text", name="image2_url")
+        p Image 3 url:
+            input#inputImage_url(type="text", name="image3_url")
+        p Image 4 url:
+            input#inputImage_url(type="text", name="image4_url")
+        p Image 5 url:
+            input#inputImage_url(type="text", name="image5_url")
+
         p
             button#btnSubmit(type="submit") submit

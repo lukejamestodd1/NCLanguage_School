@@ -20,7 +20,7 @@ router.use(methodOverride(function(req, res){
 router.route('/')
     //GET all articles
     .get(function(req, res, next) {
-        
+
         //retrieve all articles from Monogo
         mongoose.model('Article').find({}, function (err, articles) {
               if (err) {
@@ -41,7 +41,7 @@ router.route('/')
                         res.json(infophotos);
                     }
                 });
-              }     
+              }
         });
     })
     //POST a new article
@@ -49,14 +49,22 @@ router.route('/')
         // Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
         var title = req.body.title;
         var text = req.body.text;
-        var image_url = req.body.image_url;
-        
+        var image1_url = req.body.image1_url;
+        var image2_url = req.body.image2_url;
+        var image3_url = req.body.image3_url;
+        var image4_url = req.body.image4_url;
+        var image5_url = req.body.image5_url;
+
         //call the create function for our database
         mongoose.model('Article').create({
             title : title,
             text : text,
-            image_url : image_url
-            
+            image1_url : image1_url,
+            image2_url : image2_url,
+            image3_url : image3_url,
+            image4_url : image4_url,
+            image5_url : image5_url,
+
         }, function (err, article) {
               if (err) {
                   res.send("There was a problem adding the information to the database.");
@@ -111,8 +119,8 @@ router.param('id', function(req, res, next, id) {
             // once validation is done save the new item in the req
             req.id = id;
             // go to the next thing
-            next(); 
-        } 
+            next();
+        }
     });
 });
 
@@ -147,7 +155,7 @@ router.get('/:id/edit', function(req, res) {
             //Return the article
             console.log('GET Retrieving ID: ' + article._id);
             //format the date properly for the value to show correctly in our edit form
-          
+
             res.format({
                 //HTML response will render the 'edit.jade' template
                 html: function(){
@@ -182,7 +190,7 @@ router.put('/:id/edit', function(req, res) {
            }, function (err, articleID) {
               if (err) {
                   res.send("There was a problem updating the information to the database: " + err);
-              } 
+              }
               else {
                       //HTML responds by going back to the page or you can be fancy and create a new view that shows a success page.
                       res.format({
