@@ -3,10 +3,29 @@ var passport = require('passport');
 var Account = require('../models/account');
 var router = express.Router();
 
+//============= PUBLIC ROUTES ============ //
 
 router.get('/', function (req, res) {
     res.render('index', { user : req.user });
 });
+
+router.get('/enrol', function(req, res) {
+    res.render('enrol', { });
+});
+
+router.get('/campuses', function(req, res) {
+    res.render('campuses', { });
+});
+
+router.get('/news', function(req, res) {
+    res.render('news', { });
+});
+
+router.get('/contact', function(req, res) {
+    res.render('contact', { });
+});
+
+//============= ADMINSTRATION ROUTES ============ //
 
 router.get('/register', function(req, res) {
     res.render('register', { });
