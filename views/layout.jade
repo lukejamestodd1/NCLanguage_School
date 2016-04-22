@@ -13,7 +13,7 @@ html
     nav.teal(role='navigation')
       .nav-wrapper.container
         a#logo-container.brand-logo(href='/')
-          img.logo(src='images/logo_full.png')
+          img.logo(src='/images/logo_full.png')
         ul.right.hide-on-med-and-down
           li
             a.current-page(href='/') Home
@@ -40,22 +40,49 @@ html
           i.material-icons menu
     #index-banner.parallax-container
       .section.no-pad-bot.row
-        .col.s9.offset-s9
-          a.waves-effect.waves-light.btn
+        .button-container
+          a.waves-effect.waves-light.btn.button-right
             i.material-icons.right cloud
             | Language
         .container
           br
           br
-          h1.header.center.teal-text.text-lighten-2 New Century School
+          h1.header.center.teal-text.text-lighten-2.res-text 新世纪中文学校
           .row.center
-            h5.header.col.s12.light Chinese language and scholarship preparation courses
+            h5.header.col.s12.light.flow-text Chinese language and scholarship preparation courses
       .parallax
         img(src='http://racetams.net/wp-content/uploads/2014/07/Studying-book.jpg', alt='Unsplashed background img 1')
+
+
     block content
+
+    footer.page-footer.teal
+      .container
+        .row
+          .col.l5.s12
+            h5.white-text New Century School
+            p.grey-text.text-lighten-4
+              | 14/24 Lakeside Drive,
+              br
+              | Burwood East VIC 3151
+              br
+              | info@newcenturyschool.com.au
+          .col.l3.s12
+            h5.white-text Opening Hours
+            ul
+              li.white-text 9:30AM - 4:30PM
+              li.white-text Monday to Friday
+          .col.l4.s12
+            h5.white-text Contact
+            ul
+              li.white-text 03 9802 9998 - English
+              li.white-text 0403 238 818 - Mandarin
+              li.white-text 0400 880 306 - Cantonese
+              li.white-text 0430 220 078 - Mandarin
+              li.white-text 03 9802 1990 - Fax
 
   script(src='http://code.jquery.com/jquery.js')
   script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.3.10/jquery.tinymce.min.js")
-  script(src='javascripts/init.js')
+  script(src='/javascripts/init.js')

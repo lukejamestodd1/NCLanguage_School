@@ -1,6 +1,6 @@
 (function($){
  $(function(){
-
+   console.log('hi');
    $('.button-collapse').sideNav();
    $('.parallax').parallax();
 

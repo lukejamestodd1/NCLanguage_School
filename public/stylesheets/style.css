@@ -66,3 +66,18 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-right {
+  margin-right: 3vw;
+}
+
+.res-text {
+  font-size: 6vw;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
