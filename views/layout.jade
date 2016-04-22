@@ -2,11 +2,60 @@ doctype html
 html
   head
     title= title
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
     link(href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href="http://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
     link(rel='stylesheet', href='/stylesheets/style.css')
+
   body
+    nav.teal(role='navigation')
+      .nav-wrapper.container
+        a#logo-container.brand-logo(href='/')
+          img.logo(src='images/logo_full.png')
+        ul.right.hide-on-med-and-down
+          li
+            a.current-page(href='/') Home
+          li
+            a(href='/language') Enrol
+          li
+            a(href='/learning') Campuses
+          li
+            a(href='/news') News
+          li
+            a(href='/contact') Contact
+        ul#nav-mobile.side-nav
+          li
+            a.current-page(href='/') Home
+          li
+            a(href='/language') Enrol
+          li
+            a(href='/learning') Campuses
+          li
+            a(href='/news') News
+          li
+            a(href='/contact') Contact
+        a.button-collapse(href='#', data-activates='nav-mobile')
+          i.material-icons menu
+    #index-banner.parallax-container
+      .section.no-pad-bot.row
+        .col.s9.offset-s9
+          a.waves-effect.waves-light.btn
+            i.material-icons.right cloud
+            | Language
+        .container
+          br
+          br
+          h1.header.center.teal-text.text-lighten-2 New Century School
+          .row.center
+            h5.header.col.s12.light Chinese language and scholarship preparation courses
+      .parallax
+        img(src='http://racetams.net/wp-content/uploads/2014/07/Studying-book.jpg', alt='Unsplashed background img 1')
     block content
 
   script(src='http://code.jquery.com/jquery.js')
   script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.3.10/jquery.tinymce.min.js")
+  script(src='javascripts/init.js')
