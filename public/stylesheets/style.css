@@ -78,6 +78,12 @@ footer.page-footer {
 
 .res-text {
   font-size: 6vw;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: white;
 }
+
+.wider{
+  width: 90vw;
+}
+
+

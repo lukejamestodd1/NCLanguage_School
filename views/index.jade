@@ -6,18 +6,19 @@ block content
 			.row
 				.col.s12.m6
 					.icon-block
-						h5.center Latest Updates
-						ul
-							li update title 1
-							li update title 2
-							li update title 3
-							li update title 4
+							h5.center Term Dates
+							ul
+								li Term 1 ----
+								li Term 2 ----
+								li Term 3 ----
+								li Term 4 ----
 				.col.s12.m6
 					.icon-block
-							h5.center News
-							p.light
-							| Here we'll put a snippet from the latest news item from the news page. There will be a "read more" link at the end of the preview, which will take the user to the full article when clicked...
-							a(href='/news') read more
+						h5.center School News
+						ul
+							- each update, i in updates
+								li
+									= update.text
 	.parallax-container.valign-wrapper
 		.section.no-pad-bot
 			.container
@@ -37,20 +38,28 @@ block content
 						h5.center Chinese Language Courses
 						p.light
 							| This is a short description of the Chinese language programs available. Users can click on this area to redirect to the Chinese language courses page...
-							a(href='/news') read more
+							a(href='/enrol/language') read more
 				.col.s12.m6
 					.icon-block.card-panel
 						h5.center Learning Centre
 						p.light
 							| This is a short description of the learning centre program, users will be redirected to the learning centre page when this area is clicked...
-							a(href='/news') read more
+							a(href='/enrol/learning') read more
 	.container
 		.section
 			.row
 				.col.s12.center
 					h3.brown-text
 						i.mdi-content-send
-					h4 Enrol now
+					h4 Latest News
+					.col.s12.m6
+						.card.medium
+							.card-image.waves-effect.waves-block.waves-light
+								img(src="images/graduating.jpg").activator
+					.col.s12.m6
+						.card.medium
+							.card-image.waves-effect.waves-block.waves-light
+								img(src="images/graduating.jpg").activator
 					
 	.parallax-container.valign-wrapper
 		.section.no-pad-bot
