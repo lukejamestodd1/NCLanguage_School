@@ -51,7 +51,7 @@ router.get('/contact', function(req, res) {
 
 router.get('/english', function (req, res) {
     mongoose.model('Update').find(function (err, updates){
-        res.render('index', {updates: updates});
+        res.render('english_index', {updates: updates});
         });
     //res.render('english_index', { user : req.user });
 });
