@@ -1,0 +1,70 @@
+extends english_layout
+
+block content
+	.container
+		.section
+			.row
+				.col.s12.m6
+					.icon-block
+						h5.center English Site
+						ul
+							li update title 1
+							li update title 2
+							li update title 3
+							li update title 4
+				.col.s12.m6
+					.icon-block
+							h5.center News
+							p.light
+							| Here we'll put a snippet from the latest news item from the news page. There will be a "read more" link at the end of the preview, which will take the user to the full article when clicked...
+							a(href='/news') read more
+	.parallax-container.valign-wrapper
+		.section.no-pad-bot
+			.container
+				.row.center
+					h5.header.col.s12.light We know the scholarship application process inside and out
+		.parallax
+			img(src='images/learning.jpg', alt='Unsplashed background img 2')
+	.container
+		.section
+			.col.s12.center
+					h4 Our Programs
+					p.left-align.light
+					| We offer a range of programs in Chinese Language and academic development for students at all school levels. Our Learning Centre can help your child get ready to apply for a scholarship, and we can guide you through the entire process.
+			.row
+				.col.s12.m6
+					.icon-block.card-panel
+						h5.center Chinese Language Courses
+						p.light
+							| This is a short description of the Chinese language programs available. Users can click on this area to redirect to the Chinese language courses page...
+							a(href='/news') read more
+				.col.s12.m6
+					.icon-block.card-panel
+						h5.center Learning Centre
+						p.light
+							| This is a short description of the learning centre program, users will be redirected to the learning centre page when this area is clicked...
+							a(href='/news') read more
+	.container
+		.section
+			.row
+				.col.s12.center
+					h3.brown-text
+						i.mdi-content-send
+					h4 Enrol now
+					
+	.parallax-container.valign-wrapper
+		.section.no-pad-bot
+			.container
+				.row.center
+					h5.header.col.s12.light We help you get there
+		.parallax
+			img(src='images/graduating.jpg', alt='Unsplashed background img 3')
+	if (!user)
+		a(href="/login") Login
+		br
+		a(href="/register") Register
+	if (user)
+		p You are currently logged in as #{user.username}
+		a(href="/logout") Logout
+
+
