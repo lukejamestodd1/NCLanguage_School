@@ -86,4 +86,25 @@ footer.page-footer {
   width: 90vw;
 }
 
+.margined {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.margined > div {
+  margin-bottom: 2vw;
+}
+
+.margined label {
+  color: teal;
+}
+
+.btn-centre {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
 

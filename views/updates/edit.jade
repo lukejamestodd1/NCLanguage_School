@@ -1,13 +1,13 @@
-extends ../layout
+extends ../admin_layout
 
 block content
-    h1.
-        Update ID #{update._id}
-    form(action='/updates/#{update._id}/edit',method='post',name='updateupdate',enctype='application/x-www-form-urlencoded')
-        p Text: 
-            input#inputText(type='text', value='#{update.text}', name='text')
-        p 
-            input(type='hidden',value='PUT',name='_method')
-        p 
-            button#btnSubmit(type='submit').
-                Update
+    form.margined(action='/updates/#{update._id}/edit',method='post',name='updateupdate',enctype='application/x-www-form-urlencoded')
+        .form-group
+            p
+                label(for='content') New content: 
+                textarea.form-control#inputText(type='text', placeholder='#{update.text}' value='#{update.text}', name='text' rows="9")
+            p 
+                input(type='hidden',value='PUT',name='_method')
+            p 
+                button#btnSubmit.btn-lg.btn-primary.btn-centre(type='submit').
+                    Save

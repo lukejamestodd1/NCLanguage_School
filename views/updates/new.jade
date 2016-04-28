@@ -1,10 +1,15 @@
-extends ../layout
+extends ../admin_layout
 
 block content
-    h1.
-        #{title}
-    form#formAddUpdate(name="addupdate",method="post",action="/updates")
-        p Text: 
-            input#inputText(type="text", placeholder="type text here", name="text")
-        p
-            button#btnSubmit(type="submit") submit
+	form#formAddUpdate.margined(name="addupdate",method="post",action="/updates")
+		.form-group
+			p
+				label(for='content') Content:
+				textarea.form-control#inputText(rows='9' placeholder="type text here", name="text")
+			p
+				button#btnSubmit.btn-lg.btn-primary.btn-centre(type="submit") Submit
+		form.margined
+			.form-group
+				label(for='content') Content:
+					textarea.form-control(rows='9')
+				button.btn-lg.btn-primary.btn-centre(type='submit') Submit

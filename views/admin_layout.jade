@@ -8,6 +8,9 @@ html
     link(href="http://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://code.jquery.com/jquery.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.3.10/jquery.tinymce.min.js")
+    script(tinymce.init({ selector:'textarea' }))
 
   body
     nav.teal(role='navigation')
@@ -16,20 +19,24 @@ html
           img.logo(src='/images/logo_med.png')
         ul.right.hide-on-med-and-down
           li
-            a.current-page(href='/english') Home
+            a.current-page(href='/') Home
           li
-            a(href='/english/enrol') Enrolments
+            a(href='/enrol') Enrolments
           li
-            a(href='/english/campuses') Campuses
+            a(href='/campuses') Campuses
           li
-            a(href='/english/contact') Contact
+            a(href='/news') News
+          li
+            a(href='/contact') Contact
         ul#nav-mobile.side-nav
           li
-            a.current-page(href='/english') Home
+            a.current-page(href='/') Home
           li
-            a(href='/english/enrol') Enrol
+            a(href='/enrol') Enrol
           li
-            a(href='/english/campuses') Campuses
+            a(href='/campuses') Campuses
+          li
+            a(href='/news') News
           li
             a(href='/contact') Contact
         a.button-collapse(href='#', data-activates='nav-mobile')
@@ -37,9 +44,9 @@ html
     #index-banner.parallax-container
       .section.no-pad-bot.row
         .button-container
-          a.waves-effect.waves-light.btn.button-right(href='/')
+          a.waves-effect.waves-light.btn.button-right(href='/english')
             i.material-icons.right language
-            | Chinese
+            | English
         .container
           br
           br
@@ -77,8 +84,6 @@ html
               li.white-text 0430 220 078 - Mandarin
               li.white-text 03 9802 1990 - Fax
 
-  script(src='http://code.jquery.com/jquery.js')
   script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.3.10/jquery.tinymce.min.js")
   script(src='/javascripts/init.js')

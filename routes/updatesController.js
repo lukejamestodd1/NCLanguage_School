@@ -29,7 +29,7 @@ router.route('/')
                       //HTML response will render the index.jade file in the views/updates folder. We are also setting "updates" to be an accessible variable in our jade view
                     html: function(){
                         res.render('updates/index', {
-                              title: 'All my updates',
+                              title: 'All updates',
                               "updates" : updates
                           });
                     },
@@ -150,7 +150,7 @@ router.get('/:id/edit', function(req, res) {
                 //HTML response will render the 'edit.jade' template
                 html: function(){
                        res.render('updates/edit', {
-                          title: 'Update' + update._id,
+                          title: 'Edit Update',
                           "update" : update
                       });
                  },
@@ -183,7 +183,7 @@ router.put('/:id/edit', function(req, res) {
                       //HTML responds by going back to the page or you can be fancy and create a new view that shows a success page.
                       res.format({
                           html: function(){
-                               res.redirect("/updates/" + update._id);
+                               res.redirect("/updates/");
                          },
                          //JSON responds showing the updated values
                         json: function(){
