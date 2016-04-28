@@ -107,7 +107,11 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {
-    res.redirect('/');
+    res.redirect('/admin');
+});
+
+router.get('/admin', function(req, res) {
+    res.render('admin_index', { user : req.user , title: 'Admin Area'});
 });
 
 router.get('/logout', function(req, res) {

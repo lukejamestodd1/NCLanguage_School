@@ -1,8 +1,8 @@
 extends ../admin_layout
 
 block content
-    h1.
-         #{title}
+    p
+         a.btn-lg.btn-primary.btn-centre(href='/updates/new') Add a New Update
     ul
         - each update, i in updates
             li.card

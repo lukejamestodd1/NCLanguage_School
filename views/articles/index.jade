@@ -1,13 +1,18 @@
-extends ../layout
+extends ../admin_layout
 
 block content
-    h1.
-         #{title}
+    p
+         a.btn-lg.btn-primary.btn-centre(href='/articles/new') Add a New Article
     ul
         - each article, i in articles
             li
-                = article.text
-                = article._id
+                p
+                    h1
+                        = article.title
+                p
+                    = article.text
+                p
+                    img(src='#{article.image1_url')
                 form(action='/articles/#{article._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
                     input(type='hidden',value='DELETE',name='_method')
                     button(type='submit').
@@ -15,4 +20,4 @@ block content
                 p 
                     a(href='/articles/#{article._id}/edit') Edit
                 p
-                    a(href='/articles/#{article._id}') Show
+                    a(href='/articles/#{article._id}') Show full
