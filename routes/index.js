@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 router.get('/', function (req, res) {
 
     mongoose.model('Update').find(function (err, updates){
-        res.render('index', {updates: updates, title: "新世纪学校", subtitle: "subtitle"});
+        res.render('index', {updates: updates, title: "新世纪学校", subtitle: ""});
         });
     
     // res.render('index', { user : req.user }, { updates : updates});

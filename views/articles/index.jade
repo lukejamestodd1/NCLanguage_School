@@ -1,21 +1,16 @@
 extends ../admin_layout
 
 block content
-    p
-         a.btn-lg.btn-primary.btn-centre(href='/articles/new') Add a New Article
-    ul.margined
-        - each article, i in articles
-            li
-                .article-item
-                    p
-                        img(src='#{article.image1_url' , alt='http://placehold.it/250x250')
-                    p
-                        = article.title
-                    form(action='/articles/#{article._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+    .margined
+            - each article, i in articles
+                .article-item-list 
+                  img.article-list-img(src='http://placehold.it/250x250', alt='http://placehold.it/250x250')
+                  h5
+                    = article.title
+                  .article-item-buttons
+                        a(href='/articles/#{article._id}/edit') Edit
+                        a(href='/articles/#{article._id}') Show full
+                        form(action='/articles/#{article._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
                         input(type='hidden',value='DELETE',name='_method')
                         button(type='submit').
                             Delete
-                    p 
-                        a(href='/articles/#{article._id}/edit') Edit
-                    p
-                        a(href='/articles/#{article._id}') Show full

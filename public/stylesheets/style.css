@@ -170,29 +170,24 @@ footer.page-footer {
   width: 18%;
   font-size: 1.1vw;
 }
-
 .article-item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 1.5vw;
 }
-
 .article-item > :first-child {
   border-radius: 50%;
   width: 20%;
   height: 20%;
   margin-right: 10%;
 }
-
 .article-item > h3 {
   font-size: 4.5vw;
 }
-
 .article-item > p {
   text-align: justify;
 }
-
 .article-item span {
   width: 100%;
   text-align: right;
@@ -200,18 +195,35 @@ footer.page-footer {
   margin-bottom: 2vw;
   font-weight: bolder;
 }
-
 .article-item > img {
   width: 50%;
   padding: 0.5vw;
 }
-
 .card-holder {
   display: flex;
   flex-wrap: wrap;
 }
-
 .card {
   margin: 2vw;
-  width: 46%;
+  width: 44%;
+}
+.article-item-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5vw;
+}
+.article-list-img {
+  border-radius: 50%;
+  width: 12%;
+  height: 12%;
+}
+.article-item-list > h5 {
+  margin-left: -25%;
+  text-align: left;
+}
+.article-item-buttons{
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
 }

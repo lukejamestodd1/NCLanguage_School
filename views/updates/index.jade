@@ -5,11 +5,12 @@ block content
          a.btn-lg.btn-primary.btn-centre(href='/updates/new') Add a New Update
     ul
         - each update, i in updates
-            li.card
-                = update.text
+            .article-item-list
                 p
+                    = update.text
+                .article-item-buttons
                     a(href='/updates/#{update._id}/edit') Edit
-                form(action='/updates/#{update._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                    form(action='/updates/#{update._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
                     input(type='hidden',value='DELETE',name='_method')
                     button(type='submit').
                         Delete

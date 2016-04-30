@@ -14,11 +14,13 @@ block content
 			#Ash.mapspace(style='display: none;')
 			#Don.mapspace(style='display: none;')
 			#Haw.mapspace(style='display: none;')
-			button#whButton.waves-effect.waves-light.btn-large  Wheeler's Hill 
-			button#temButton.waves-effect.waves-light.btn-large  Templestowe 
-			button#ashButton.waves-effect.waves-light.btn-large  Ashwood 
-			button#donButton.waves-effect.waves-light.btn-large  Doncaster 
-			button#hawButton.waves-effect.waves-light.btn-large  Hawthorn
+			.campus_btns
+				button#whButton.waves-effect.waves-light.btn-large  Wheeler's Hill 
+				button#temButton.waves-effect.waves-light.btn-large  Templestowe 
+				button#ashButton.waves-effect.waves-light.btn-large  Ashwood 
+				button#donButton.waves-effect.waves-light.btn-large  Doncaster 
+				button#hawButton.waves-effect.waves-light.btn-large  Hawthorn
+			include sch_class_info.html
 	script(src='http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAJ914nvbWDv457JXNCo8GBPig_F_3HTvw')
 	script(src="../javascripts/maps.js")
 	script(src='http://code.jquery.com/jquery.js')
