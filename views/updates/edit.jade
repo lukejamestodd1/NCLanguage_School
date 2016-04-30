@@ -5,7 +5,8 @@ block content
         .form-group
             p
                 label(for='content') New content: 
-                textarea.form-control#inputText(type='text', placeholder='#{update.text}' value='#{update.text}', name='text' rows="9")
+                textarea.form-control#inputText(type='text', value='#{update.text}', name='text' rows="9")
+                    |#{update.text}
             p 
                 input(type='hidden',value='PUT',name='_method')
             p 

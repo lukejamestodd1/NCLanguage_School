@@ -1,17 +1,26 @@
 extends ../admin_layout
 
 block content
-    h1.
-        Title: #{article.title}
-    form(action='/articles/#{article._id}/edit',method='post',name='updatearticle',enctype='application/x-www-form-urlencoded')
-        p Title: 
-            input#inputTitle(type='text', value='#{article.title}', name='title')
-        p Text: 
-            input#inputText(type='text', value='#{article.text}', name='text')
-        p Image url: 
-            input#inputImage_url(type='text', value='#{article.image_url}', name='image_url')
-        p 
-            input(type='hidden',value='PUT',name='_method')
-        p 
-            button#btnSubmit(type='submit').
-                Save
+    form.margined(action='/articles/#{article._id}/edit',method='post',name='updatearticle',enctype='application/x-www-form-urlencoded')
+        .form-group
+            p Title: 
+                input#inputTitle(type='text', value='#{article.title}', name='title')
+            p
+                label(for='content') New content: 
+                textarea.form-control#inputText(type='text', value='#{article.text}', name='text' rows="9")
+                        |#{article.text}
+            p Image 1 url: 
+                input#inputImage_url(type='text', value='#{article.image1_url}', name='image1_url')
+            p Image 2 url: 
+                input#inputImage_url(type='text', value='#{article.image2_url}', name='image2_url')
+            p Image 3 url: 
+                input#inputImage_url(type='text', value='#{article.image3_url}', name='image3_url')
+            p Image 4 url: 
+                input#inputImage_url(type='text', value='#{article.image4_url}', name='image4_url')
+            p Image 5 url: 
+                input#inputImage_url(type='text', value='#{article.image5_url}', name='image5_url')
+            p 
+                input(type='hidden',value='PUT',name='_method')
+            p 
+                button#btnSubmit.btn-lg.btn-primary.btn-centre(type='submit').
+                        Save

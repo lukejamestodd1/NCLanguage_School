@@ -1,22 +1,25 @@
 extends layout
 
 block content
-	.container
-		.section
-			.col.s12.center
-					h4 Our Campuses
-			.row
-				.col.s12.m6
-					.icon-block.card-panel
-						h5.center Chinese Language Courses
-						p.light
-							| This is a list of campuses for the Chinese language program
-							a(href='/campuses/language') Language course campuses
-					.icon-block.card-panel
-						h5.center Learning Centre
-						p.light
-							| This is a list of campus locations for the learning centre program
-							a(href='/campuses/learning') Learning Centre campuses
-				.col.s12.m6
-					.icon-block
-						iframe.responsive-image(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25201.34111883815!2d145.14955353816674!3d-37.85636774425573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63f0ef1ad9759%3A0x28d67f7f9a557b0!2s14%2F24+Lakeside+Dr%2C+Burwood+East+VIC+3151!5e0!3m2!1sen!2sau!4v1459472708541', width='450', height='300', frameborder='0', style='border:0', allowfullscreen='')
+	.row.green.lighten-4
+		.col.s3
+			.mini_nav
+				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='chinese_school') 中文学校
+				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='scholarship_classes') 奖学金班
+				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='chinese_school') 下载报名资料
+		.col.s9.white.left-border
+			#Office.mapspace
+			#WH.mapspace(style='display: none;')
+			#Tem.mapspace(style='display: none;')
+			#Ash.mapspace(style='display: none;')
+			#Don.mapspace(style='display: none;')
+			#Haw.mapspace(style='display: none;')
+			button#whButton.waves-effect.waves-light.btn-large  Wheeler's Hill 
+			button#temButton.waves-effect.waves-light.btn-large  Templestowe 
+			button#ashButton.waves-effect.waves-light.btn-large  Ashwood 
+			button#donButton.waves-effect.waves-light.btn-large  Doncaster 
+			button#hawButton.waves-effect.waves-light.btn-large  Hawthorn
+	script(src='http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAJ914nvbWDv457JXNCo8GBPig_F_3HTvw')
+	script(src="../javascripts/maps.js")
+	script(src='http://code.jquery.com/jquery.js')
+	script(src="../javascripts/js.js")

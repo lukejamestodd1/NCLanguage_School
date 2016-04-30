@@ -108,3 +108,110 @@ footer.page-footer {
   margin-top: 30px;
 }
 
+.margined {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.margined > div {
+  margin-bottom: 2vw;
+}
+
+.margined label {
+  color: teal;
+}
+
+.btn-centre {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.mini_nav{
+  margin-top: 5vw;
+  padding-right: 3vw;
+}
+
+.margined_btn {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.slider .slides li img {
+  background-size:100% auto;
+  background-repeat: no-repeat;
+}
+
+.left-border {
+  border-left-color: grey;
+  border-left-style: double;
+  border-left-width: thick;
+}
+
+.mapspace {
+  height: 350px;
+  width: 100%;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+.course_details {
+  padding: 1vw;
+}
+
+.campus_btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.campus_btns button {
+  width: 18%;
+  font-size: 1.1vw;
+}
+
+.article-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1.5vw;
+}
+
+.article-item > :first-child {
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  margin-right: 10%;
+}
+
+.article-item > h3 {
+  font-size: 4.5vw;
+}
+
+.article-item > p {
+  text-align: justify;
+}
+
+.article-item span {
+  width: 100%;
+  text-align: right;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  font-weight: bolder;
+}
+
+.article-item > img {
+  width: 50%;
+  padding: 0.5vw;
+}
+
+.card-holder {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 2vw;
+  width: 46%;
+}

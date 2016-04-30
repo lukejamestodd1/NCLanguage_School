@@ -1,23 +1,28 @@
 extends ../admin_layout
 
 block content
-    h1.
-        #{title}
-    form#formAddArticle(name="addarticle",method="post",action="/articles")
-        p Title:
-            input#inputTitle(type="text", placeholder="enter title", name="title")
-        p Text:
-            input#inputText(type="text", placeholder="enter article contents here", name="text")
-        p Image 1 url:
-            input#inputImage_url(type="text", name="image1_url")
-        p Image 2 url:
-            input#inputImage_url(type="text", name="image2_url")
-        p Image 3 url:
-            input#inputImage_url(type="text", name="image3_url")
-        p Image 4 url:
-            input#inputImage_url(type="text", name="image4_url")
-        p Image 5 url:
-            input#inputImage_url(type="text", name="image5_url")
-
-        p
-            button#btnSubmit(type="submit") submit
+    form#formAddArticle.margined(name="addarticle",method="post",action="/articles")
+        .form-group
+            p Title:
+                input#inputTitle(type="text", placeholder="enter title", name="title")
+            p Text:
+                textarea.form-control#inputText(rows='9' placeholder="type text here", name="text")
+            p Image 1 url:
+                input#inputImage_url(type="text", name="image1_url")
+            p Image 2 url:
+                input#inputImage_url(type="text", name="image2_url")
+            p Image 3 url:
+                input#inputImage_url(type="text", name="image3_url")
+            p Image 4 url:
+                input#inputImage_url(type="text", name="image4_url")
+            p Image 5 url:
+                input#inputImage_url(type="text", name="image5_url")
+            .switch
+                label
+                    | 教学园地
+                    input(name='switch_Activate', type='hidden', value='0')
+                    input(id='$Customer_ID', name='switch_Activate', type='checkbox', onclick='Switch_Activate(this.id)', checked='', value='1')
+                    span.lever
+                    |           最新消息
+            p
+                button#btnSubmit.btn-lg.btn-primary.btn-centre(type="submit") Save
