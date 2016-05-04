@@ -9,7 +9,6 @@ var mongoose = require('mongoose');
 router.get('/', function (req, res) {
 
     mongoose.model('Update').find(function (err, updates){
-        
         mongoose.model('Article').find(function (err, articles){
 
             res.render('index', {update1: updates[updates.length - 1], update2: updates[updates.length - 2], article1: articles[articles.length - 1], article2: articles[articles.length - 2], title: "新世纪学校", subtitle: ""});

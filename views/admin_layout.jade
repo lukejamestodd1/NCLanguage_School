@@ -19,7 +19,7 @@ html
           img.logo(src='/images/logo_med.png')
         ul.right.hide-on-med-and-down
           li
-            a.current-page(href='/admin') Admin Area
+            a(href='/admin') Admin Area
           li
             a(href='/updates') Updates
           li
@@ -32,7 +32,7 @@ html
             a(href='/logout') Logout
         ul#nav-mobile.side-nav
           li
-            a.current-page(href='/admin') Admin Area
+            a(href='/admin') Admin Area
           li
             a(href='/updates') Updates
           li
@@ -91,3 +91,10 @@ html
   script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
   script(src='/javascripts/init.js')
+  script.
+    $(document).ready(function(){
+      tinymce.remove();
+      tinyMCE.init({
+      selector: "textarea"
+      });
+    });
