@@ -9,6 +9,7 @@ block content
                 p
                     = update.text
                 .article-item-buttons
+                    a(href='/updates/#{update._id}/') Show
                     a(href='/updates/#{update._id}/edit') Edit
                     form(action='/updates/#{update._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
                     input(type='hidden',value='DELETE',name='_method')
