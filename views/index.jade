@@ -55,7 +55,7 @@ block content
 												= article1.title
 												i.material-icons.right close
 										p
-											= article1.text
+											!{article1.text}
 											a(href='articles/#{article1._id}')
 							.card
 									.card-image.waves-effect.waves-block.waves-light
@@ -73,7 +73,7 @@ block content
 												= article2.title
 												i.material-icons.right close
 										p
-											= article2.text
+											!{article2.text}
 											a(href='articles/#{article2._id}')
 
 	.parallax-container.valign-wrapper
@@ -83,5 +83,3 @@ block content
 					h5.header.col.s12.light 齹鑶鸓 墂嫫嵾 媝寔嵒 桾殍 膣
 		.parallax
 			img(src='images/2.jpg', alt='Unsplashed background img 3')
-
-
