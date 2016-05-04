@@ -178,7 +178,11 @@ router.put('/:id/edit', function(req, res) {
     // Get our REST or form values. These rely on the "name" attributes
     var title = req.body.title;
     var text = req.body.text;
-    var image_url = req.body.image_url;
+    var image1_url = req.body.image1_url;
+    var image2_url = req.body.image2_url;
+    var image3_url = req.body.image3_url;
+    var image4_url = req.body.image4_url;
+    var image5_url = req.body.image5_url;
 
    //find the document by ID
         mongoose.model('Article').findById(req.id, function (err, article) {
@@ -186,7 +190,11 @@ router.put('/:id/edit', function(req, res) {
             article.update({
                 title : title,
                 text : text,
-                image_url : image_url
+                image1_url : image1_url,
+                image2_url : image2_url,
+                image3_url : image3_url,
+                image4_url : image4_url,
+                image5_url : image5_url,
            }, function (err, articleID) {
               if (err) {
                   res.send("There was a problem updating the information to the database: " + err);
