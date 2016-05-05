@@ -1,6 +1,60 @@
 extends layout
 
 block content
-	.container
-		.section
-			h4 Learning Centre Enrolments
+	.row.green.lighten-4
+		.col.s3
+			.mini_nav
+				a(href='/enrol/language')
+					button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='chinese_school') 中文学校
+				a(href='/enrol/learning')
+					button.waves-effect.waves-light.btn-large.col.s12.margined_btn.blue(type='button', name='scholarship_classes') 奖学金班
+				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='download') 下载报名资料
+				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='download') 下载报名资料
+		.col.s9.white.left-border
+			div
+				h2 中文学校
+				p
+					| 新世纪中文学校成立于2000年，恰好是一个新的世纪的开始。这是我们取名新世纪中文学校的直接原因。
+					| 而更深层的意义是：我们立志在墨尔本这块美丽的土地上面向新世纪 ，为海外华人子女的教育尽力，
+					| 使他们成为新世纪的人才，不但能立足海外，而且能向世界展现我们炎黄子孙的风采。
+					br
+					br
+					|           新世纪中文学校成立以来取得了令人欣喜的成绩。我校VCE连年取得极高的高分率，培养出多个维省状元。
+					|           取得这样好的成绩，我们学校有我们自己一整套的方法，这包括教学，管理和服务等许多方面。
+					|           如果说有诀窍的话，那就是始终把教学质量放在所有工作的首位， 诀窍是在各个方面，每个细节的。
+					|           新世纪的学生和家长们最能感受到这一点，当他们取得好成绩时，他们对学校充满了感激，
+					|           这也是我们最敢欣慰的。
+					br
+					br
+					|           新世纪中文学校设有Wheeler Hill, Templestowe, Doncaster和Hawthorn四个分校。
+					|           开设中文学前班至VCE12年级全部课程。聘请的中文老师都是有相关教育文凭的经验教师。而且，
+					|           每个分校都由办学人员亲自管理，确保了我校的教学质量。我们知道，任何产品都可以反工，
+					|           任何生意都可以重来，只有教育不同，教育是不能反工的，学生一但被耽误，就没有回头的机会。
+					|           所以，保证高质量的教学，保证学生发挥出最大的潜能是我们唯一的准则。
+					br
+					br
+					|           我校老师们的工作一直受到学生和家长们的普遍好评，家长们都说：“新世纪管理很好，井井有条，
+					|           办事认真细致，让人放心。”
+					br
+					br
+					|           为了保证教学质量，我校每年安排和组织大量的听课评课活动，老师之间互相评课，互相学习，
+					|           取长补短，确保教学质量。通过交流活动，老师之间互相学习到很多长处。
+					br
+					br
+					|           展望未来，我们充满信心，充满动力。全校师生会更加努力，更加勤奋。
+					|           我们也希望社会各界的朋友们一如既往地支持我们新世纪。让我们共同把“新世纪”办成华人子弟教育的快车，
+					|           华人精英人才的摇篮。
+					br
+					br
+					|           欢迎报读新世纪中文学校。
+					br
+			.slider(style='margin-bottom: 3vw; margin-top: 2vw;')
+				ul.slides
+					li
+						img(src='http://lorempixel.com/580/250/nature/1')
+					li
+						img(src='http://lorempixel.com/580/250/nature/2')
+					li
+						img(src='http://lorempixel.com/580/250/nature/3')
+					li
+						img(src='http://lorempixel.com/580/250/nature/4')

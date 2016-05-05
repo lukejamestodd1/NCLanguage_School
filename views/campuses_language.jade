@@ -1,6 +1,30 @@
 extends layout
 
 block content
-	.container
-		.section
-			h4 Language Course Locations
+	.row.green.lighten-4
+		.col.s3
+			.mini_nav
+				a(href='/campuses/language')
+					button.waves-effect.waves-light.btn-large.col.s12.margined_btn.blue(type='button', name='chinese_school') 中文学校
+				a(href='/campuses/learning')
+					button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='scholarship_classes') 奖学金班
+				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='download') 下载报名资料
+				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='download') 下载报名资料
+		.col.s9.white.left-border
+			#Office.mapspace
+			#WH.mapspace(style='display: none;')
+			#Tem.mapspace(style='display: none;')
+			#Ash.mapspace(style='display: none;')
+			#Don.mapspace(style='display: none;')
+			#Haw.mapspace(style='display: none;')
+			.campus_btns
+				button#whButton.waves-effect.waves-light.btn-large  Wheeler's Hill 
+				button#temButton.waves-effect.waves-light.btn-large  Templestowe 
+				button#ashButton.waves-effect.waves-light.btn-large  Ashwood 
+				button#donButton.waves-effect.waves-light.btn-large  Doncaster 
+				button#hawButton.waves-effect.waves-light.btn-large  Hawthorn
+			include sch_class_info.html
+	script(src='http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAJ914nvbWDv457JXNCo8GBPig_F_3HTvw')
+	script(src="../javascripts/maps.js")
+	script(src='http://code.jquery.com/jquery.js')
+	script(src="../javascripts/js.js")
