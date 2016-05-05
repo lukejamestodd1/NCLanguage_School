@@ -19,7 +19,8 @@ router.get('/', function (req, res) {
 });
 
 router.get('/enrol', function(req, res) {
-    res.render('enrol', { title: "Enrolments - Chinese"});
+    //res.render('enrol', { title: "Enrolments - Chinese"});
+    res.redirect('/enrol/language');
 });
 
 router.get('/enrol/language', function(req, res) {
@@ -31,7 +32,8 @@ router.get('/enrol/learning', function(req, res) {
 });
 
 router.get('/campuses', function(req, res) {
-    res.render('campuses', { title: "Campuses - Chinese"});
+    //res.render('campuses', { title: "Campuses - Chinese"});
+    res.redirect('/campuses/language');
 });
 
 router.get('/campuses/language', function(req, res) {
@@ -44,6 +46,10 @@ router.get('/campuses/learning', function(req, res) {
 
 router.get('/news', function(req, res) {
     res.render('news', { article : req.article, title: "News - Chinese"});
+});
+
+router.get('/blog', function(req, res) {
+    res.render('news', { article : req.article, title: "Teacher blog - Chinese"});
 });
 
 router.get('/contact', function(req, res) {
