@@ -4,6 +4,8 @@ $(document).ready(function(){
  });
 
 $('#whButton').on('click', function(){
+  $('.campus_info div').css("display","none")
+  $('#info_wh').css("display", "block");
   $('.mapspace').css("display", "none");
   $('#WH').css("display", "block");
   initMap();
@@ -12,6 +14,8 @@ $('#whButton').on('click', function(){
 });
 
 $('#temButton').on('click', function(){
+  $('.campus_info div').css("display","none")
+  $('#info_tem').css("display", "block");
   $('.mapspace').css("display", "none");
   $('#Tem').css("display", "block");
   initMap();
@@ -20,6 +24,8 @@ $('#temButton').on('click', function(){
 });
 
 $('#ashButton').on('click', function(){
+  $('.campus_info div').css("display","none")
+  $('#info_ash').css("display", "block");
   $('.mapspace').css("display", "none");
   $('#Ash').css("display", "block");
   initMap();
@@ -28,6 +34,8 @@ $('#ashButton').on('click', function(){
 });
 
 $('#donButton').on('click', function(){
+  $('.campus_info div').css("display","none")
+  $('#info_don').css("display", "block");
   $('.mapspace').css("display", "none");
   $('#Don').css("display", "block");
   initMap();
@@ -36,6 +44,8 @@ $('#donButton').on('click', function(){
 });
 
 $('#hawButton').on('click', function(){
+  $('.campus_info div').css("display","none")
+  $('#info_haw').css("display", "block");
   $('.mapspace').css("display", "none");
   $('#Haw').css("display", "block");
   initMap();

@@ -227,3 +227,22 @@ footer.page-footer {
   width: 30%;
   justify-content: space-between;
 }
+
+.no-btm-margin {
+  margin-bottom: 0;
+}
+
+.campus_info{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.campus_info div {
+  width: 100%;
+  display: none;
+}
+
+.campus_info div img {
+  width: 100%;
+}
