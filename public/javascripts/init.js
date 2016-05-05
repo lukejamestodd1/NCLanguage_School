@@ -9,7 +9,8 @@
 
 $(function(){
   $('a').each(function() {
-		if ($(this).prop('href') == window.location.href) {
+  	//if current url includes button link, change status
+		if (window.location.href.indexOf($(this).prop('href')) > -1) {
 	  	$(this).addClass('current-page');
 	  }
   });
