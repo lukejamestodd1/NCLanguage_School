@@ -246,3 +246,7 @@ footer.page-footer {
 .campus_info div img {
   width: 100%;
 }
+
+.campus_info div p {
+  font-size: 1.6vw;
+}
