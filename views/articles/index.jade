@@ -7,12 +7,12 @@ block content
                   img.article-list-img(src='http://placehold.it/250x250', alt='http://placehold.it/250x250')
                   h5
                     = article.title
-                  p
-                    -if(article.blog_or_news == '0')
-                      p News Story
-                    -else
-                      p Teacher Blog
                   .article-item-buttons
+                        p
+                        -if(article.blog_or_news == '0')
+                          p News Story
+                        -else
+                          p Teacher Blog
                         a(href='/articles/#{article._id}/edit') Edit
                         a(href='/articles/#{article._id}') Show full
                         form(action='/articles/#{article._id}/edit',method='post',enctype='application/x-www-form-urlencoded')

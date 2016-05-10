@@ -221,10 +221,11 @@ footer.page-footer {
 .article-item-list > h5 {
   margin-left: -25%;
   text-align: left;
+  font-size: 100%;
 }
 .article-item-buttons{
   display: flex;
-  width: 30%;
+  width: 50%;
   justify-content: space-between;
 }
 
