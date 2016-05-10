@@ -235,7 +235,7 @@ footer.page-footer {
 .campus_info{
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
 
 .campus_info div {
@@ -245,4 +245,8 @@ footer.page-footer {
 
 .campus_info div img {
   width: 100%;
+}
+
+.campus_info div p {
+  font-size: 1.6vw;
 }
