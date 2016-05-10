@@ -19,10 +19,10 @@ block content
                 input#inputImage_url(type="text", name="image5_url")
             .switch
                 label
-                    | 教学园地
+                    | 教学园地 (teachers' area)
                     input(name='switch_Activate', type='hidden', value='0')
-                    input(id='$Customer_ID', name='switch_Activate', type='checkbox', onclick='Switch_Activate(this.id)', checked='', value='1')
+                    input(id='$Customer_ID', name='switch_Activate', type='checkbox', onclick='switch_Activate(this.id)', checked='', value='1')
                     span.lever
-                    |           最新消息
+                    |           最新消息 (recent news)
             p
                 button#btnSubmit.btn-lg.btn-primary.btn-centre(type="submit") Save

@@ -54,6 +54,7 @@ router.route('/')
         var image3_url = req.body.image3_url;
         var image4_url = req.body.image4_url;
         var image5_url = req.body.image5_url;
+        var blog_or_news = req.body.switch_Activate;
 
         //call the create function for our database
         mongoose.model('Article').create({
@@ -64,6 +65,7 @@ router.route('/')
             image3_url : image3_url,
             image4_url : image4_url,
             image5_url : image5_url,
+            blog_or_news : blog_or_news,
 
         }, function (err, article) {
               if (err) {

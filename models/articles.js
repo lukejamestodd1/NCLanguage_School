@@ -6,6 +6,7 @@ var articleSchema = new mongoose.Schema({
   image2_url: String,
   image3_url: String,
   image4_url: String,
-  image5_url: String
+  image5_url: String,
+  blog_or_news: String
 });
 module.exports = mongoose.model('Article', articleSchema);
