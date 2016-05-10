@@ -185,6 +185,7 @@ router.put('/:id/edit', function(req, res) {
     var image3_url = req.body.image3_url;
     var image4_url = req.body.image4_url;
     var image5_url = req.body.image5_url;
+    var blog_or_news = req.body.switch_Activate;
 
    //find the document by ID
         mongoose.model('Article').findById(req.id, function (err, article) {
@@ -197,6 +198,8 @@ router.put('/:id/edit', function(req, res) {
                 image3_url : image3_url,
                 image4_url : image4_url,
                 image5_url : image5_url,
+                blog_or_news : blog_or_news,
+
            }, function (err, articleID) {
               if (err) {
                   res.send("There was a problem updating the information to the database: " + err);
@@ -217,7 +220,7 @@ router.put('/:id/edit', function(req, res) {
         });
 });
 
-//DELETE a article by ID
+//DELETE article by ID
 router.delete('/:id/edit', function (req, res){
     //find article by ID
     mongoose.model('Article').findById(req.id, function (err, article) {

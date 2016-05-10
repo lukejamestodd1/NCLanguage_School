@@ -8,11 +8,14 @@ block content
                   h5
                     = article.title
                   p
-                    = article.blog_or_news
+                    -if(article.blog_or_news == '0')
+                      p News Story
+                    -else
+                      p Teacher Blog
                   .article-item-buttons
                         a(href='/articles/#{article._id}/edit') Edit
                         a(href='/articles/#{article._id}') Show full
                         form(action='/articles/#{article._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
-                        input(type='hidden',value='DELETE',name='_method')
-                        button(type='submit').
+                          input(type='hidden',value='DELETE',name='_method')
+                          button(type='submit').
                             Delete

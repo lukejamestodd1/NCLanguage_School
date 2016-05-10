@@ -19,6 +19,13 @@ block content
                 input#inputImage4_url(type='text', value='#{article.image4_url}', name='image4_url')
             p Image 5 url: 
                 input#inputImage5_url(type='text', value='#{article.image5_url}', name='image5_url')
+            .switch
+                label
+                    | 教学园地 (teachers' area)
+                    input(name='switch_Activate', type='hidden', value='0')
+                    input(id='$Customer_ID', name='switch_Activate', type='checkbox', onclick='switch_Activate(this.id)', checked='', value='1')
+                    span.lever
+                    |           最新消息 (recent news)
             p 
                 input(type='hidden',value='PUT',name='_method')
             p 
