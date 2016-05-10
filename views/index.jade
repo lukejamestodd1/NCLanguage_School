@@ -5,12 +5,12 @@ block content
 		.section
 			.row
 				.col.s12.m6
-					.icon-block
+					.icon-block.card-panel
 						h5.center Term Dates
 						p
 							!{update1.text}
 				.col.s12.m6
-					.icon-block
+					.icon-block.card-panel
 						h5.center School News
 						p
 							!{update2.text}
@@ -38,6 +38,8 @@ block content
 							a(href='/enrol/learning') read more
 	.container
 		.section
+			.row
+						h5.center Latest News
 			.card-holder
 							.card
 									.card-image.waves-effect.waves-block.waves-light
@@ -75,6 +77,11 @@ block content
 										p
 											!{article2.text}
 											a(href='articles/#{article2._id}')
+		.row
+			.button-container
+							a.waves-effect.waves-light.btn.button-right(href='/news')
+								i.material-icons.right language
+								| More News
 
 	.parallax-container.valign-wrapper
 		.section.no-pad-bot
