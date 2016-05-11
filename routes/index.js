@@ -14,7 +14,7 @@ router.get('/', function (req, res) {
             res.render('index', {update1: updates[updates.length - 1], update2: updates[updates.length - 2], article1: articles[articles.length - 1], article2: articles[articles.length - 2], title: "新世纪学校", subtitle: ""});
         });
     });
-    
+
     // res.render('index', { user : req.user }, { updates : updates});
 });
 
@@ -37,7 +37,7 @@ router.get('/campuses', function(req, res) {
 });
 
 router.get('/campuses/language', function(req, res) {
-    res.render('campuses_language', { title: "Capuses - language program - Chinese"});
+    res.render('campuses_language', { title: "Campuses - language program - Chinese"});
 });
 
 router.get('/campuses/learning', function(req, res) {
