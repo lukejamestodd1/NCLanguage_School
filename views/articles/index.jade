@@ -1,6 +1,8 @@
 extends ../admin_layout
 
 block content
+    p
+      a.btn-lg.btn-primary.btn-centre(href='/articles/new') Add a New Article
     .margined
             - each article, i in articles
                 .article-item-list 

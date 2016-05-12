@@ -8,7 +8,7 @@ block content
 							a.collection-item.active(href='/articles/#{article._id}') #{article.title}
 		.col.s9.white
 			.article-item
-						img(src='#{article_latest.Image1}', alt='http://placehold.it/250x250')
+						img(src='#{article_latest.image1_url}', alt='http://placehold.it/250x250')
 						h3
 							= article_latest.title
 						span Author Name - NEWS
@@ -16,7 +16,7 @@ block content
 							= article_latest.text
 							br
 							br
-						img(src='#{article_latest.Image2}', alt='http://placehold.it/450x250')
-						img(src='#{article_latest.Image3}', alt='http://placehold.it/450x250')
-						img(src='#{article_latest.Image4}', alt='http://placehold.it/450x250')
-						img(src='#{article_latest.Image5}', alt='http://placehold.it/450x250')
+						img(src='#{article_latest.image2_url}', alt='http://placehold.it/450x250')
+						img(src='#{article_latest.image3_url}', alt='http://placehold.it/450x250')
+						img(src='#{article_latest.image4_url}', alt='http://placehold.it/450x250')
+						img(src='#{article_latest.image5_url}', alt='http://placehold.it/450x250')
