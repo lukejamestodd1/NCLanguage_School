@@ -129,23 +129,27 @@ router.param('id', function(req, res, next, id) {
 router.route('/:id')
   .get(function(req, res) {
     mongoose.model('Article').findById(req.id, function (err, article) {
+      mongoose.model('Article').find({blog_or_news : article.blog_or_news}, function (err, articles) {
       if (err) {
         console.log('GET Error: There was a problem retrieving: ' + err);
       } else {
-        console.log('GET Retrieving ID: ' + article._id);
-        res.format({
-          html: function(){
-              res.render('articles/show', {
-                "article" : article
-              });
-          },
-          json: function(){
-              res.json(article);
-          }
+          console.log('GET Retrieving ID: ' + article._id);
+          res.format({
+            html: function(){
+                res.render('articles/show', {
+                  article_current : article,
+                  articles : articles,
+                });
+            },
+            json: function(){
+                res.json(article);
+            }
         });
       }
     });
+
   });
+});
 
   //GET the individual article by Mongo ID
 router.get('/:id/edit', function(req, res) {
