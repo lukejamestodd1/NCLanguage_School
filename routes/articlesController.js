@@ -138,7 +138,7 @@ router.route('/:id')
             html: function(){
                 res.render('articles/show', {
                   article_current : article,
-                  articles : articles,
+                  articles : articles.reverse(),
                 });
             },
             json: function(){

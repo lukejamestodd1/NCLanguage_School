@@ -50,8 +50,8 @@ router.get('/campuses/learning', function(req, res) {
 router.get('/news', function(req, res) {
     mongoose.model('Article').find({blog_or_news : '0,1'}, function (err, articles){
             res.render('news', {
-                articles: articles, 
-                article_latest: articles[articles.length - 1],
+                articles: articles.reverse(), 
+                article_latest: articles[0],
                 title: "News - Chinese page",
                 subtitle: ""})
         });
@@ -60,8 +60,8 @@ router.get('/news', function(req, res) {
 router.get('/blog', function(req, res) {
     mongoose.model('Article').find({blog_or_news : '0'}, function (err, articles){
             res.render('blog', {
-                articles: articles, 
-                article_latest: articles[articles.length - 1],
+                articles: articles.reverse(), 
+                article_latest: articles[0],
                 title: "Teacher Blog - Chinese page",
                 subtitle: ""})
         });

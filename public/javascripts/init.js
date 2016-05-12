@@ -11,6 +11,7 @@ $(function(){
   	//if current url includes button link, change status
     if (window.location.href.indexOf($(this).prop('href')) > -1) {
 	  	$(this).addClass('current-page');
+      $(this).addClass('active');
 	  }
   });
  });
