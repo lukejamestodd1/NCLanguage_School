@@ -5,7 +5,7 @@ block content
         - each update, i in updates
             .article-item-list
                 p
-                    = update.text
+                    !{update.text}
                 .article-item-buttons
                     a(href='/updates/#{update._id}/') Show
                     a(href='/updates/#{update._id}/edit') Edit
