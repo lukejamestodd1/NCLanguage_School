@@ -4,41 +4,19 @@ block content
 	.row.green.lighten-4
 		.col.s3
 			.collection
-				a.collection-item(href='') article 1
-				a.collection-item(href='') article 2
-				a.collection-item.active(href='') article 3
-				a.collection-item(href='') article 4
-				a.collection-item(href='') article 5
-				a.collection-item(href='') article 6
-				a.collection-item(href='') article 7
+				- each article, i in articles
+							a.collection-item(href='/articles/#{article._id}') #{article.title}
 		.col.s9.white
 			.article-item
-				img(src='http://placehold.it/250x250', alt='http://placehold.it/250x250')
-				h3 Lorem Ipsum
-				span Marcus Tullius Cicero
-				p
-					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla,
-					| libero eu commodo faucibus, tellus mauris ullamcorper sem, eget consectetur
-					| sem quam eget ligula. Maecenas fringilla lorem sit amet erat semper malesuada.
-					| Nam commodo leo vel mauris porttitor, ut mattis lacus laoreet. Cras vel auctor
-					| massa. Sed ut ultricies dolor. Maecenas suscipit dui orci, eget tempor magna
-					| ultrices at. Suspendisse elit ante, blandit et augue nec, eleifend rutrum mauris.
-					| Aenean sit amet turpis sit amet libero laoreet hendrerit dictum eu dolor. 
-					br
-					br
-					|			Fusce vel facilisis nisl. Aenean non felis dolor. Pellentesque eget diam at mi
-					|			ornare volutpat. In lacinia ante dolor, id fringilla nisi suscipit ut. Vestibulum
-					|			est orci, tempus vitae elit vitae, facilisis suscipit sapien. Integer semper urna
-					|			efficitur quam imperdiet varius. Proin vel eleifend arcu, non pulvinar purus.
-					br
-					br
-					|			Duis vitae dictum mauris. Sed sit amet viverra leo, at consequat urna. Maecenas non
-					|			elit commodo, consectetur erat commodo, tempor est. Quisque aliquet arcu quis sodales
-					|			dignissim. Etiam mollis tellus vitae turpis dignissim maximus. Donec eget fringilla nibh.
-					|			Quisque blandit dolor non massa tempor convallis. Maecenas eu lorem quam.
-					br
-					br
-				img(src='http://placehold.it/450x250', alt='')
-				img(src='http://placehold.it/450x250', alt='')
-				img(src='http://placehold.it/450x250', alt='')
-				img(src='http://placehold.it/450x250', alt='')
+						img(src='#{article_latest.Image1}', alt='http://placehold.it/250x250')
+						h3
+							= article_latest.title
+						span Author Name - NEWS
+						p
+							= article_latest.text
+							br
+							br
+						img(src='#{article_latest.Image2}', alt='http://placehold.it/450x250')
+						img(src='#{article_latest.Image3}', alt='http://placehold.it/450x250')
+						img(src='#{article_latest.Image4}', alt='http://placehold.it/450x250')
+						img(src='#{article_latest.Image5}', alt='http://placehold.it/450x250')

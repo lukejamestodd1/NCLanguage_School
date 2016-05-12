@@ -10,12 +10,9 @@ router.get('/', function (req, res) {
 
     mongoose.model('Update').find(function (err, updates){
         mongoose.model('Article').find(function (err, articles){
-
             res.render('index', {update1: updates[updates.length - 1], update2: updates[updates.length - 2], article1: articles[articles.length - 1], article2: articles[articles.length - 2], title: "新世纪学校", subtitle: ""});
         });
     });
-
-    // res.render('index', { user : req.user }, { updates : updates});
 });
 
 router.get('/enrol', function(req, res) {
@@ -45,11 +42,23 @@ router.get('/campuses/learning', function(req, res) {
 });
 
 router.get('/news', function(req, res) {
-    res.render('news', { article : req.article, title: "News - Chinese"});
+    mongoose.model('Article').find({blog_or_news : '0,1'}, function (err, articles){
+            res.render('news', {
+                articles: articles, 
+                article_latest: articles[articles.length - 1],
+                title: "News - Chinese page",
+                subtitle: ""})
+        });
 });
 
 router.get('/blog', function(req, res) {
-    res.render('news', { article : req.article, title: "Teacher blog - Chinese"});
+    mongoose.model('Article').find({blog_or_news : '0'}, function (err, articles){
+            res.render('blog', {
+                articles: articles, 
+                article_latest: articles[articles.length - 1],
+                title: "Teacher Blog - Chinese page",
+                subtitle: ""})
+        });
 });
 
 router.get('/contact', function(req, res) {
