@@ -65,6 +65,7 @@ router.get('/blog', function(req, res) {
                 title: "Teacher Blog - Chinese page",
                 subtitle: ""})
         });
+
 });
 
 router.get('/contact', function(req, res) {

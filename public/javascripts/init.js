@@ -1,6 +1,5 @@
 (function($){
  $(function(){
-   console.log('hi');
    $('.button-collapse').sideNav();
    $('.parallax').parallax();
 
@@ -10,10 +9,7 @@
 $(function(){
   $('a').each(function() {
   	//if current url includes button link, change status
-    if (window.location.href === $(this).prop('href')) {
-      $(this).addClass('active');
-    }
-		else if (window.location.href.indexOf($(this).prop('href')) > -1) {
+    if (window.location.href.indexOf($(this).prop('href')) > -1) {
 	  	$(this).addClass('current-page');
 	  }
   });

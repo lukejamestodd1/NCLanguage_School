@@ -5,7 +5,7 @@ block content
 		.col.s3
 			.collection
 				- each article, i in articles
-							a.collection-item(href='/articles/#{article._id}') #{article.title}
+							a.collection-item.active(href='/articles/#{article._id}') #{article.title}
 		.col.s9.white
 			.article-item
 						img(src='#{article_current.Image1}', alt='http://placehold.it/250x250')
