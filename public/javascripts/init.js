@@ -14,16 +14,13 @@
 })(jQuery); // end of jQuery name space
 
 
-
-// $(function(){
-//   $('a').each(function() {
-//   	//if current url includes button link, change status
-//     if (window.location.href.indexOf($(this).prop('href')) > -1) {
-// 	  	$(this).addClass('current-page');
-//       $(this).addClass('active');
-// 	  }
-//   });
-//  });
+$(function(){
+  $('.articles-nav a').each(function() {
+    if (window.location.href === $(this).prop('href')) {
+      $(this).addClass('active');
+	  }
+  });
+});
 
 $(function(){
   var tabs = ['enrol', 'campuses', 'news', 'blog', 'contact'];
@@ -31,10 +28,17 @@ $(function(){
     for(var i = 0; i < tabs.length; i++) {
       if (window.location.pathname.includes(tabs[i])) {
         $('#homepage').removeClass('current-page');
-        $('#homepage').removeClass('active');
         $('#'+tabs[i]).addClass('current-page');
-        $('#'+tabs[i]).addClass('active');
-      };
+      }
+      else if (window.location.pathname.includes('articles')){
+        $('#homepage').removeClass('current-page');
+        if ($('#article-type').html() === '0'){
+          $('#blog').addClass('current-page');
+        }
+        else if ($('#article-type').html() === '0,1'){
+          $('#news').addClass('current-page');
+        }
+      }
     };
   });
- });
+});

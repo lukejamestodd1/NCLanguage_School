@@ -3,7 +3,7 @@ extends ../layout
 block content
 	.row.green.lighten-4
 		.col.s3
-			.collection
+			.collection.articles-nav
 				- each article, i in articles
 							a.collection-item(href='/articles/#{article._id}') #{article.title}
 		.col.s9.white
@@ -11,7 +11,7 @@ block content
 						img(src='#{article_current.image1_url}', alt='http://placehold.it/250x250')
 						h3
 							= article_current.title
-						span Author Name - BLOGS
+						span Author Name
 						p
 							!{article_current.text}
 							br
@@ -20,3 +20,5 @@ block content
 						img(src='#{article_current.image3_url}', alt='http://placehold.it/450x250')
 						img(src='#{article_current.image4_url}', alt='http://placehold.it/450x250')
 						img(src='#{article_current.image5_url}', alt='http://placehold.it/450x250')
+						p#article-type.hidden
+							= article_current.blog_or_news
