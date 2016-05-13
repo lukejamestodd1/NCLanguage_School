@@ -6,12 +6,11 @@
   }); // end of document ready
 
   $(function(){
-
- // The rest above this is hidden
-
     $('.slider').slider();
-
   });
+
+  //get rid of bottom margin on main row all views
+  $('body .lighten-4').addClass('no-btm-margin');
 })(jQuery); // end of jQuery name space
 
 
