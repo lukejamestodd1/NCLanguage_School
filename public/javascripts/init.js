@@ -1,9 +1,17 @@
 (function($){
- $(function(){
-   $('.button-collapse').sideNav();
-   $('.parallax').parallax();
+  $(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
 
- }); // end of document ready
+  }); // end of document ready
+
+  $(function(){
+
+ // The rest above this is hidden
+
+    $('.slider').slider();
+
+  });
 })(jQuery); // end of jQuery name space
 
 

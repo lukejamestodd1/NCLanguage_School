@@ -1,8 +1,3 @@
-
-$(document).ready(function(){
-   $('.slider').slider({full_width: true, height: 250, indicators: false});
- });
-
 $('#whButton').on('click', function(){
   $('.campus_info div').css("display","none")
   $('#info_wh').css("display", "block");
