@@ -52,7 +52,7 @@ router.get('/news', function(req, res) {
             res.render('news', {
                 articles: articles.reverse(), 
                 article_latest: articles[0],
-                title: "News - Chinese page",
+                title: "最新消息",
                 subtitle: ""})
         });
 });
@@ -62,14 +62,14 @@ router.get('/blog', function(req, res) {
             res.render('blog', {
                 articles: articles.reverse(), 
                 article_latest: articles[0],
-                title: "Teacher Blog - Chinese page",
+                title: "教学园地",
                 subtitle: ""})
         });
 
 });
 
 router.get('/contact', function(req, res) {
-    res.render('contact', { title: "Contact - Chinese"});
+    res.render('contact', { title: "联系方法"});
 });
 
 //============= ENGLISH ROUTES ============ //
