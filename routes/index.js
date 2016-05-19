@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 router.get('/', function (req, res) {
 
     mongoose.model('Update').find(function (err, updates){
-        mongoose.model('Article').find(function (err, articles){
+        mongoose.model('Article').find({blog_or_news : '0,1'},function (err, articles){
             res.render('index', {
                 update1: updates[updates.length - 1], 
                 update2: updates[updates.length - 2], 

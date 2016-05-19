@@ -9,7 +9,7 @@ block content
 		.col.s9.white
 			- each article, i in articles
 				.article-item
-						img(src='#{article.image1_url}', alt='http://placehold.it/250x250')
+						img(src='#{article.image1_url}')
 						h3
 							= article.title
 						span
@@ -20,8 +20,8 @@ block content
 							br
 							br
 						.card-holder
-							img.img-card(src='#{article.image2_url}', alt='http://placehold.it/450x250')
-							img.img-card(src='#{article.image3_url}', alt='http://placehold.it/450x250')
-							img.img-card(src='#{article.image4_url}', alt='http://placehold.it/450x250')
-							img.img-card(src='#{article.image5_url}', alt='http://placehold.it/450x250')
+							img.img-card(src='#{article.image2_url}')
+							img.img-card(src='#{article.image3_url}')
+							img.img-card(src='#{article.image4_url}')
+							img.img-card(src='#{article.image5_url}')
 				.divider

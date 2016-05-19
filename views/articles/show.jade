@@ -8,7 +8,7 @@ block content
 							a.collection-item(href='/articles/#{article._id}') #{article.title}
 		.col.s9.white
 			.article-item
-						img(src='#{article_current.image1_url}', alt='http://placehold.it/250x250')
+						img(src='#{article_current.image1_url}')
 						h3
 							= article_current.title
 						span
@@ -19,9 +19,9 @@ block content
 							br
 							br
 						.card-holder
-							img.img-card(src='#{article_current.image2_url}', alt='http://placehold.it/450x250')
-							img.img-card(src='#{article_current.image3_url}', alt='http://placehold.it/450x250')
-							img.img-card(src='#{article_current.image4_url}', alt='http://placehold.it/450x250')
-							img.img-card(src='#{article_current.image5_url}', alt='http://placehold.it/450x250')
+							img.img-card(src='#{article_current.image2_url}')
+							img.img-card(src='#{article_current.image3_url}')
+							img.img-card(src='#{article_current.image4_url}')
+							img.img-card(src='#{article_current.image5_url}')
 						p#article-type.hidden
 							= article_current.blog_or_news
