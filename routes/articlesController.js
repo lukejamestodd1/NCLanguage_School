@@ -49,6 +49,7 @@ router.route('/')
         // Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
         var title = req.body.title;
         var text = req.body.text;
+        var date = req.body.date;
         var image1_url = req.body.image1_url;
         var image2_url = req.body.image2_url;
         var image3_url = req.body.image3_url;
@@ -60,6 +61,7 @@ router.route('/')
         mongoose.model('Article').create({
             title : title,
             text : text,
+            date : date,
             image1_url : image1_url,
             image2_url : image2_url,
             image3_url : image3_url,
@@ -184,6 +186,7 @@ router.put('/:id/edit', function(req, res) {
     // Get our REST or form values. These rely on the "name" attributes
     var title = req.body.title;
     var text = req.body.text;
+    var date = req.body.date;
     var image1_url = req.body.image1_url;
     var image2_url = req.body.image2_url;
     var image3_url = req.body.image3_url;
@@ -197,6 +200,7 @@ router.put('/:id/edit', function(req, res) {
             article.update({
                 title : title,
                 text : text,
+                date : date,
                 image1_url : image1_url,
                 image2_url : image2_url,
                 image3_url : image3_url,

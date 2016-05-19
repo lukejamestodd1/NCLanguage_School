@@ -6,8 +6,8 @@ block content
     .margined
             - each article, i in articles
                 .article-item-list 
-                  img.article-list-img(src='http://placehold.it/250x250', alt='http://placehold.it/250x250')
-                  h5
+                  img.article-list-img(src='#{article.image1_url}')
+                  h5.flow-text
                     = article.title
                   .article-item-buttons
                         p

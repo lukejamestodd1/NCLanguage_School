@@ -5,6 +5,8 @@ block content
         .form-group
             p Title: 
                 input#inputTitle(type='text', value='#{article.title}', name='title')
+            p Date: 
+                input#inputDate(type='text', value='#{article.date}', name='date')
             p
                 label(for='content') New content: 
                 textarea.form-control#inputText(type='text', value='#{article.text}', name='text' rows="9")

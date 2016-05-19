@@ -207,6 +207,11 @@ footer.page-footer {
   margin: 2vw;
   width: 44%;
 }
+.img-card {
+  margin: 2vw;
+  width: 44%;
+  height: 25%;
+}
 .article-item-list {
   display: flex;
   align-items: center;
@@ -256,3 +261,4 @@ footer.page-footer {
   width: 25%;
   height: 25%;
 }
+
