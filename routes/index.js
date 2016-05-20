@@ -22,7 +22,6 @@ router.get('/', function (req, res) {
 });
 
 router.get('/enrol', function(req, res) {
-    //res.render('enrol', { title: "Enrolments - Chinese"});
     res.redirect('/enrol/language');
 });
 
@@ -78,11 +77,10 @@ router.get('/english', function (req, res) {
     mongoose.model('Update').find(function (err, updates){
         res.render('english_index', {updates: updates, title: "New Century School", subtitle: "Chinese language courses and learning centre"});
         });
-    //res.render('english_index', { user : req.user });
 });
 
 router.get('/english/enrol', function(req, res) {
-    res.render('english_enrol', { title: "Enrolments"});
+    res.redirect('/enrol/language');
 });
 
 router.get('/english/enrol/language', function(req, res) {
@@ -94,7 +92,7 @@ router.get('/english/enrol/learning', function(req, res) {
 });
 
 router.get('/english/campuses', function(req, res) {
-    res.render('english_campuses', { title: "Campuses"});
+    res.redirect('/campuses/language');
 });
 
 router.get('/english/campuses/language', function(req, res) {
@@ -103,6 +101,14 @@ router.get('/english/campuses/language', function(req, res) {
 
 router.get('/english/campuses/learning', function(req, res) {
     res.render('english_campuses_learning', { title: "Learning Centre Locations"});
+});
+
+router.get('/english/news', function(req, res) {
+    res.render('english_news', { title: "News"});
+});
+
+router.get('/english/blog', function(req, res) {
+    res.render('english_blog', { title: "Teacher's Area"});
 });
 
 router.get('/english/contact', function(req, res) {
