@@ -27,11 +27,11 @@ router.get('/enrol', function(req, res) {
 });
 
 router.get('/enrol/language', function(req, res) {
-    res.render('enrol_language', { title: "Enrolments - Language Program - Chinese"});
+    res.render('enrol_language', { title: "中文学校报名"});
 });
 
 router.get('/enrol/learning', function(req, res) {
-    res.render('enrol_learning', { title: "Enrolments - Learning Centre - Chinese"});
+    res.render('enrol_learning', { title: "教育中心报名"});
 });
 
 router.get('/campuses', function(req, res) {
@@ -40,11 +40,11 @@ router.get('/campuses', function(req, res) {
 });
 
 router.get('/campuses/language', function(req, res) {
-    res.render('campuses_language', { title: "Campuses - language program - Chinese"});
+    res.render('campuses_language', { title: "中文学校分校"});
 });
 
 router.get('/campuses/learning', function(req, res) {
-    res.render('campuses_learning', { title: "campuses - learning centre - Chinese"});
+    res.render('campuses_learning', { title: "教育中心分校"});
 });
 
 router.get('/news', function(req, res) {
