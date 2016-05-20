@@ -122,7 +122,7 @@ router.post('/register', function(req, res) {
         }
 
         passport.authenticate('local')(req, res, function () {
-            res.redirect('/');
+            res.redirect('/admin');
         });
     });
 });
@@ -136,7 +136,14 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
 });
 
 router.get('/admin', function(req, res) {
+    if (req.user) {
+    // logged in
     res.render('admin_index', { user : req.user , title: 'Admin Area'});
+    }
+    else {
+    // not logged in
+    res.redirect('/');
+    }   
 });
 
 router.get('/logout', function(req, res) {

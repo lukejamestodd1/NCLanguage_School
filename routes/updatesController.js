@@ -19,6 +19,7 @@ router.use(methodOverride(function(req, res){
 router.route('/')
     //GET all updates
     .get(function(req, res, next) {
+      if (req.user) {
         //retrieve all updates from Monogo
         mongoose.model('Update').find({}, function (err, updates) {
               if (err) {
@@ -40,43 +41,59 @@ router.route('/')
                 });
               }     
         });
+      }
+      else {
+      res.redirect('/');
+      } 
     })
     //POST a new update
     .post(function(req, res) {
-        // Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
-   
-        var text = req.body.text;
-        //call the create function for our database
-        mongoose.model('Update').create({
-   
-            text : text
-           
-        }, function (err, update) {
-              if (err) {
-                  res.send("There was a problem adding the information to the database.");
-              } else {
-                  //update has been created
-                  console.log('POST creating new update: ' + update);
-                  res.format({
-                      //HTML response will set the location and redirect back to the home page. You could also create a 'success' page if that's your thing
-                    html: function(){
-                        // If it worked, set the header so the address bar doesn't still say /adduser
-                        res.location("updates");
-                        // And forward to success page
-                        res.redirect("/updates");
-                    },
-                    //JSON response will show the newly created update
-                    json: function(){
-                        res.json(update);
-                    }
-                });
-              }
+        if (req.user) {
+          // Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
+     
+          var text = req.body.text;
+          //call the create function for our database
+          mongoose.model('Update').create({
+     
+              text : text
+             
+          }, function (err, update) {
+                if (err) {
+                    res.send("There was a problem adding the information to the database.");
+                } else {
+                    //update has been created
+                    console.log('POST creating new update: ' + update);
+                    res.format({
+                        //HTML response will set the location and redirect back to the home page. You could also create a 'success' page if that's your thing
+                      html: function(){
+                          // If it worked, set the header so the address bar doesn't still say /adduser
+                          res.location("updates");
+                          // And forward to success page
+                          res.redirect("/updates");
+                      },
+                      //JSON response will show the newly created update
+                      json: function(){
+                          res.json(update);
+                      }
+                  });
+                }
+          
+        
         })
+      }
+          else {
+          res.redirect('/');
+          } 
     });
 
 /* GET New update page. */
 router.get('/new', function(req, res) {
+  if (req.user) {
     res.render('updates/new', { title: 'Add New update' });
+  }
+  else {
+    res.redirect('/');
+  } 
 });
 
 // route middleware to validate :id
@@ -136,6 +153,8 @@ router.route('/:id')
 
   //GET the individual update by Mongo ID
 router.get('/:id/edit', function(req, res) {
+    
+  if (req.user) {
     //search for the update within Mongo
     mongoose.model('Update').findById(req.id, function (err, update) {
         if (err) {
@@ -161,6 +180,10 @@ router.get('/:id/edit', function(req, res) {
             });
         }
     });
+  }
+  else {
+    res.redirect('/');
+  }
 });
 
 //PUT to update a update by ID
