@@ -69,7 +69,7 @@ router.get('/blog', function(req, res) {
 });
 
 router.get('/contact', function(req, res) {
-    res.render('contact', { title: "联系方法"});
+    res.render('contact', { title: "联系方法", msg: "Send a message"});
 });
 
 // Email functionality
@@ -79,24 +79,25 @@ router.post('/contact', function(req, res) {
     service: 'Gmail',
     auth: {
         user: "yang.j.li91@gmail.com",
-        pass: "application-specific-password"
+        pass: "gbbtgeyveafdhvou"
     }
   });
   //Mail options
   var mailOpts = {
-    from: req.body.name + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
-    to: 'yang.j.li91@gmail.com',
+    from: "yang.j.li91@gmail.com",//grab form data from the request body object
+    to: 'info@newcenturyschool.com.au',
     subject: 'Website contact form',
-    text: req.body.message
+    html: 'From ' + req.body.nm + '<br><br>' + req.body.email + '<br><br>' + req.body.ph_num + '<br><br>' + req.body.message
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     //Email not sent
     if (error) {
-        res.render('contact', { title: 'Fail - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contact' })
+        console.log(error);
+        res.render('contact', { title: '联系方法', msg: 'Error occured - please call 9802 9998.', err: true, page: 'contact' })
     }
     //Yay!! Email sent
     else {
-        res.render('contact', { title: 'Sent - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contact' })
+        res.render('contact', { title: '联系方法', msg: 'Message sent! Thank you.', err: false, page: 'contact' })
     }
   });
 });
@@ -199,7 +200,7 @@ router.get('/admin', function(req, res) {
     else {
     // not logged in
     res.redirect('/');
-    }   
+    }
 });
 
 router.get('/logout', function(req, res) {
