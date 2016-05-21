@@ -89,6 +89,13 @@ router.post('/contact', function(req, res) {
     subject: 'Website contact form',
     html: 'From ' + req.body.nm + '<br><br>' + req.body.email + '<br><br>' + req.body.ph_num + '<br><br>' + req.body.message
   };
+
+  //Checking for completion
+  if (!req.body.nm || !req.body.email || !req.body.message) {
+    res.render('contact', {title: '联系方法', msg: 'Please include a name and email.', err: true, page: 'contact' })
+  }
+
+  //Error msging
   smtpTrans.sendMail(mailOpts, function (error, response) {
     //Email not sent
     if (error) {
