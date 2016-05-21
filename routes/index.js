@@ -12,8 +12,8 @@ router.get('/', function (req, res) {
     mongoose.model('Update').find(function (err, updates){
         mongoose.model('Article').find({blog_or_news : '0,1'},function (err, articles){
             res.render('index', {
-                update1: updates[updates.length - 1],
-                update2: updates[updates.length - 2],
+                update1: updates[1],
+                update2: updates[0],
                 article1: articles[articles.length - 1],
                 article2: articles[articles.length - 2],
                 title: "新世纪学校", subtitle: ""
@@ -107,8 +107,8 @@ router.get('/english', function (req, res) {
    mongoose.model('Update').find(function (err, updates){
         mongoose.model('Article').find({blog_or_news : '0,1'},function (err, articles){
             res.render('english_index', {
-                update1: updates[updates.length - 1],
-                update2: updates[updates.length - 2],
+                update3: updates[3],
+                update4: updates[2],
                 article1: articles[articles.length - 1],
                 article2: articles[articles.length - 2],
                 title: "New Century School", subtitle: "Chinese language and learning centre"
