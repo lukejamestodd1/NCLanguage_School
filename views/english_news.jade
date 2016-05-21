@@ -1,27 +1,4 @@
 extends layout
 
 block content
-	.row.green.lighten-4.no-btm-margin
-		.col.s3
-			.mini_nav
-				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='chinese_school') 中文学校
-				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='scholarship_classes') 奖学金班
-				button.waves-effect.waves-light.btn-large.col.s12.margined_btn(type='button', name='chinese_school') 下载报名资料
-		.col.s9.white.left-border
-			#Office.mapspace
-			#WH.mapspace(style='display: none;')
-			#Tem.mapspace(style='display: none;')
-			#Ash.mapspace(style='display: none;')
-			#Don.mapspace(style='display: none;')
-			#Haw.mapspace(style='display: none;')
-			.campus_btns
-				button#temButton.waves-effect.waves-light.btn-large  Templestowe 
-				button#whButton.waves-effect.waves-light.btn-large  WH
-				button#hawButton.waves-effect.waves-light.btn-large  Hawthorn
-				button#donButton.waves-effect.waves-light.btn-large  Doncaster 
-				button#ashButton.waves-effect.waves-light.btn-large  Ashwood 
-			include campuses_info.html
-	script(src="../javascripts/maps.js")
-	script(src='http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAJ914nvbWDv457JXNCo8GBPig_F_3HTvw' async defer)
-	script(src='http://code.jquery.com/jquery.js')
-	script(src="../javascripts/js.js")
+	
