@@ -8,11 +8,11 @@ block content
 							a.collection-item(href='/articles/#{article._id}') #{article.title}
 		.col.s9.white
 			.article-item
-						img(src='#{article_current.image1_url}')
+						img.first-image(src='#{article_current.image1_url}')
 						h3
 							= article_current.title
 						span
-							p
+							p#date
 								= article_current.date
 						p
 							!{article_current.text}

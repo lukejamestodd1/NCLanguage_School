@@ -9,11 +9,11 @@ block content
 		.col.s9.white
 			- each article, i in articles
 				.article-item
-						img(src='#{article.image1_url}')
+						img.first-image(src='#{article.image1_url}')
 						h3
 							= article.title
 						span
-							p
+							p#date
 								= article.date
 						p
 							!{article.text}

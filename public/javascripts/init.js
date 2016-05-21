@@ -42,3 +42,23 @@ $(function(){
     };
   });
 });
+
+$(function(){
+    //remove boxes for empty images
+    $('.img-card').each(function(){
+      if (this.currentSrc === ""){
+        $(this).addClass("hidden");
+      }
+    })
+    $('.first-image').each(function(){
+      if (this.currentSrc === ""){
+        $(this).addClass("hidden");
+      }
+    })
+    //remove date if "undefined"
+    $('p').each(function(){
+      if (this.data === "undefined"){
+        $(this).addClass("hidden");
+      }
+    })
+});

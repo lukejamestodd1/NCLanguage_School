@@ -267,4 +267,6 @@ footer.page-footer {
 .index-news{
   height: 17em;
 }
-
+.hidden{
+  display: none;
+}
