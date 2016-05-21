@@ -6,18 +6,18 @@ block content
 			.row
 				.col.s12.m6
 					.row
-						h5.center Send a message
+						h5.center #{msg}
 						form(action='/contact', name='contactus', id='contactus', class='col s12', method='post')
 							.row
 								.input-field.col.s6
-									input(name='name', type='text', value='', id='first_name')
-									label(for='name') Name
+									input(name='nm', type='text', value='', id='nm')
+									label(for='nm') Name
 								.input-field.col.s6
-									input#phone_number.validate(type='text')
-									label(for='phone_number') Phone Number
+									input(name='ph_num', type='text', value='', id='ph_num')
+									label(for='ph_num') Phone Number
 							.row
 								.input-field.col.s12
-									textarea(name= 'message' id='textarea1' class='materialize-textarea')
+									textarea(name='message' id='textarea1' class='materialize-textarea')
 									label(for='message') Message
 							.row
 								.input-field.col.s12
