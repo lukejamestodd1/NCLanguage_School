@@ -104,13 +104,21 @@ router.post('/contact', function(req, res) {
 //============= ENGLISH ROUTES ============ //
 
 router.get('/english', function (req, res) {
-    mongoose.model('Update').find(function (err, updates){
-        res.render('english_index', {updates: updates, title: "New Century School", subtitle: "Chinese language courses and learning centre"});
+   mongoose.model('Update').find(function (err, updates){
+        mongoose.model('Article').find({blog_or_news : '0,1'},function (err, articles){
+            res.render('english_index', {
+                update1: updates[updates.length - 1],
+                update2: updates[updates.length - 2],
+                article1: articles[articles.length - 1],
+                article2: articles[articles.length - 2],
+                title: "New Century School", subtitle: "Chinese language and learning centre"
+            });
         });
+    });
 });
 
 router.get('/english/enrol', function(req, res) {
-    res.redirect('/enrol/language');
+    res.redirect('/english/enrol/language');
 });
 
 router.get('/english/enrol/language', function(req, res) {
@@ -122,7 +130,7 @@ router.get('/english/enrol/learning', function(req, res) {
 });
 
 router.get('/english/campuses', function(req, res) {
-    res.redirect('/campuses/language');
+    res.redirect('/english/campuses/language');
 });
 
 router.get('/english/campuses/language', function(req, res) {
@@ -134,11 +142,23 @@ router.get('/english/campuses/learning', function(req, res) {
 });
 
 router.get('/english/news', function(req, res) {
-    res.render('english_news', { title: "News"});
+    mongoose.model('Article').find({blog_or_news : '0,1'}, function (err, articles){
+            res.render('english_news', {
+                articles: articles.reverse(),
+                article_latest: articles[0],
+                title: "News",
+                subtitle: ""})
+        });
 });
 
 router.get('/english/blog', function(req, res) {
-    res.render('english_blog', { title: "Teacher's Area"});
+    mongoose.model('Article').find({blog_or_news : '0'}, function (err, articles){
+            res.render('english_blog', {
+                articles: articles.reverse(),
+                article_latest: articles[0],
+                title: "Teacher's Area",
+                subtitle: ""})
+        });
 });
 
 router.get('/english/contact', function(req, res) {
