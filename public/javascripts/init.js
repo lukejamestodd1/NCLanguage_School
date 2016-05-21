@@ -43,7 +43,8 @@ $(function(){
   });
 });
 
-$(function(){
+
+$(window).load(function(){
     //remove boxes for empty images
     $('.img-card').each(function(){
       if (this.currentSrc === ""){
