@@ -7,22 +7,24 @@ block content
 				.col.s12.m6
 					.row
 						h5.center Send a message
-						form.col.s12
+						form(action='/contact', name='contactus', id='contactus', class='col s12', method='post')
 							.row
 								.input-field.col.s6
-									input#first_name.validate(type='text')
-									label(for='first_name') Name
+									input(name='name', type='text', value='', id='first_name')
+									label(for='name') Name
 								.input-field.col.s6
 									input#phone_number.validate(type='text')
 									label(for='phone_number') Phone Number
 							.row
 								.input-field.col.s12
-									textarea#textarea1.materialize-textarea
-									label(for='textarea1') Message
+									textarea(name= 'message' id='textarea1' class='materialize-textarea')
+									label(for='message') Message
 							.row
 								.input-field.col.s12
-									input#email.validate(type='email')
+									input(name='email', type='text', value='', id='email')
 									label(for='email') Your Email
+							.row
+								input(name='submit', type='submit', value='Send', id='submit', class='btn')
 				.col.s12.m6
 					.icon-block.center
 						h5 Office Address
