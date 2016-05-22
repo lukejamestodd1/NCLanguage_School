@@ -93,6 +93,9 @@ router.post('/contact', function(req, res) {
   //Checking for completion
   if (!req.body.nm || !req.body.email || !req.body.message) {
     res.render('contact', {title: '联系方法', msg: 'Please include a name and email.', err: true, page: 'contact' })
+  //Honey pot spam rejection
+  } else if (req.body.spampot) {
+    res.render('contact', {title: '联系方法', msg: 'You are a spam bot.', err: true, page: 'contact' })
   }
 
   //Error msging
