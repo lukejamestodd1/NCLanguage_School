@@ -173,7 +173,7 @@ router.get('/english/blog', function(req, res) {
 });
 
 router.get('/english/contact', function(req, res) {
-    res.render('english_contact', { title: "Contact"});
+    res.render('english_contact', { title: "Contact", msg: "Send a message"});
 });
 
 //============= ADMINSTRATION ROUTES ============ //
