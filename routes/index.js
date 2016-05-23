@@ -10,7 +10,7 @@ var nodemailer = require('nodemailer');
 router.get('/', function (req, res) {
 
     mongoose.model('Update').find(function (err, updates){
-        mongoose.model('Article').find({blog_or_news : '0,1'},function (err, articles){
+        mongoose.model('Article').find({blog_or_news : '0,1', language : '0'},function (err, articles){
             res.render('index', {
                 update1: updates[1],
                 update2: updates[0],
@@ -48,7 +48,7 @@ router.get('/campuses/learning', function(req, res) {
 });
 
 router.get('/news', function(req, res) {
-    mongoose.model('Article').find({blog_or_news : '0,1'}, function (err, articles){
+    mongoose.model('Article').find({blog_or_news : '0,1', language : '0'}, function (err, articles){
             res.render('news', {
                 articles: articles.reverse(),
                 article_latest: articles[0],
@@ -58,7 +58,7 @@ router.get('/news', function(req, res) {
 });
 
 router.get('/blog', function(req, res) {
-    mongoose.model('Article').find({blog_or_news : '0'}, function (err, articles){
+    mongoose.model('Article').find({blog_or_news : '0', language : '0'}, function (err, articles){
             res.render('blog', {
                 articles: articles.reverse(),
                 article_latest: articles[0],
@@ -116,7 +116,7 @@ router.post('/contact', function(req, res) {
 
 router.get('/english', function (req, res) {
    mongoose.model('Update').find(function (err, updates){
-        mongoose.model('Article').find({blog_or_news : '0,1'},function (err, articles){
+        mongoose.model('Article').find({blog_or_news : '0,1', language : '0,1'},function (err, articles){
             res.render('english_index', {
                 update3: updates[3],
                 update4: updates[2],
@@ -153,7 +153,7 @@ router.get('/english/campuses/learning', function(req, res) {
 });
 
 router.get('/english/news', function(req, res) {
-    mongoose.model('Article').find({blog_or_news : '0,1'}, function (err, articles){
+    mongoose.model('Article').find({blog_or_news : '0,1',language : '0,1'}, function (err, articles){
             res.render('english_news', {
                 articles: articles.reverse(),
                 article_latest: articles[0],
@@ -163,7 +163,7 @@ router.get('/english/news', function(req, res) {
 });
 
 router.get('/english/blog', function(req, res) {
-    mongoose.model('Article').find({blog_or_news : '0'}, function (err, articles){
+    mongoose.model('Article').find({blog_or_news : '0',language : '0,1'}, function (err, articles){
             res.render('english_blog', {
                 articles: articles.reverse(),
                 article_latest: articles[0],

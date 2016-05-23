@@ -8,6 +8,7 @@ var articleSchema = new mongoose.Schema({
   image3_url: String,
   image4_url: String,
   image5_url: String,
-  blog_or_news: String
+  blog_or_news: String,
+  language: String,
 });
 module.exports = mongoose.model('Article', articleSchema);

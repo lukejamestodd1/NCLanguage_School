@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+	.row.green.lighten-4
+		.col.s3
+			.collection.articles-nav
+				- each article, i in articles
+							a.collection-item(href='/articles/#{article._id}') #{article.title}
+		.col.s9.white
+			.article-item
+						img.first-image(src='#{article_current.image1_url}')
+						h3
+							= article_current.title
+						span
+							p#date
+								= article_current.date
+						p
+							!{article_current.text}
+							br
+							br
+						.card-holder
+							img.img-card(src='#{article_current.image2_url}')
+							img.img-card(src='#{article_current.image3_url}')
+							img.img-card(src='#{article_current.image4_url}')
+							img.img-card(src='#{article_current.image5_url}')
+						p#article-type.hidden
+							= article_current.blog_or_news
+						p#article-language.hidden
+							= article_current.language

@@ -60,6 +60,7 @@ router.route('/')
           var image4_url = req.body.image4_url;
           var image5_url = req.body.image5_url;
           var blog_or_news = req.body.switch_Activate;
+          var language = req.body.switch_Activate2;
 
           //call the create function for our database
           mongoose.model('Article').create({
@@ -72,6 +73,7 @@ router.route('/')
               image4_url : image4_url,
               image5_url : image5_url,
               blog_or_news : blog_or_news,
+              language : language
 
           }, function (err, article) {
                 if (err) {
@@ -143,7 +145,7 @@ router.param('id', function(req, res, next, id) {
 router.route('/:id')
   .get(function(req, res) {
     mongoose.model('Article').findById(req.id, function (err, article) {
-      mongoose.model('Article').find({blog_or_news : article.blog_or_news}, function (err, articles) {
+      mongoose.model('Article').find({blog_or_news : article.blog_or_news, language : article.language}, function (err, articles) {
       if (err) {
         console.log('GET Error: There was a problem retrieving: ' + err);
       } else {
@@ -212,6 +214,7 @@ router.put('/:id/edit', function(req, res) {
     var image4_url = req.body.image4_url;
     var image5_url = req.body.image5_url;
     var blog_or_news = req.body.switch_Activate;
+    var language = req.body.switch_Activate2;
 
    //find the document by ID
         mongoose.model('Article').findById(req.id, function (err, article) {
@@ -226,6 +229,7 @@ router.put('/:id/edit', function(req, res) {
                 image4_url : image4_url,
                 image5_url : image5_url,
                 blog_or_news : blog_or_news,
+                language : language
 
            }, function (err, articleID) {
               if (err) {

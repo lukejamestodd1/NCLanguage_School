@@ -1,4 +1,27 @@
 extends english_layout
 
 block content
-	
+	.row.green.lighten-4
+		.col.s3
+			.collection
+				- each article, i in articles
+							a.collection-item(href='/articles/#{article._id}') #{article.title}
+		.col.s9.white
+			- each article, i in articles
+				.article-item
+						img.first-image(src='#{article.image1_url}')
+						h3
+							= article.title
+						span
+							p#date
+								= article.date
+						p
+							!{article.text}
+							br
+							br
+						.card-holder
+							img.img-card(src='#{article.image2_url}')
+							img.img-card(src='#{article.image3_url}')
+							img.img-card(src='#{article.image4_url}')
+							img.img-card(src='#{article.image5_url}')
+				.divider
