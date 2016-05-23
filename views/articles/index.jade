@@ -11,15 +11,19 @@ block content
                     = article.title
                   .article-item-buttons
                         p
-                        -if(article.blog_or_news == '0,0')
+                        -if(article.blog_or_news == '0')
                           p Teacher Blog
                         -else
                           p News Article
                         p
-                        -if(article.language == '1')
+                          = article.blog_or_news
+                        p
+                        -if(article.language == '0,1')
                           p English
                         -else
                           p Chinese
+                        p
+                          = article.language
                         a(href='/articles/#{article._id}/edit') Edit
                         a(href='/articles/#{article._id}') Show full
                         form(action='/articles/#{article._id}/edit',method='post',enctype='application/x-www-form-urlencoded')

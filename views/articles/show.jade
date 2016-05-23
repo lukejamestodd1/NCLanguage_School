@@ -1,4 +1,7 @@
-extends ../layout
+-if(article_current.language == '0,1')
+		extends ../english_layout
+-else
+		extends ../layout
 
 block content
 	.row.green.lighten-4

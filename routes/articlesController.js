@@ -145,7 +145,7 @@ router.param('id', function(req, res, next, id) {
 router.route('/:id')
   .get(function(req, res) {
     mongoose.model('Article').findById(req.id, function (err, article) {
-      mongoose.model('Article').find({blog_or_news : article.blog_or_news}, function (err, articles) {
+      mongoose.model('Article').find({blog_or_news : article.blog_or_news, language : article.language}, function (err, articles) {
       if (err) {
         console.log('GET Error: There was a problem retrieving: ' + err);
       } else {
