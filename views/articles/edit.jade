@@ -28,6 +28,13 @@ block content
                     input(id='$Customer_ID', name='switch_Activate', type='checkbox', onclick='switch_Activate(this.id)', checked='', value='1')
                     span.lever
                     |           最新消息 (recent news)
+            .switch
+                label
+                    | Language  - Chinese
+                    input(name='switch_Activate', type='hidden', value='0')
+                    input(id='$language', name='switch_Activate2', type='checkbox', onclick='switch_Activate2(this.id)', checked='', value='1')
+                    span.lever
+                    |           English
             p 
                 input(type='hidden',value='PUT',name='_method')
             p 

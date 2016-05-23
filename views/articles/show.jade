@@ -23,5 +23,11 @@ block content
 							img.img-card(src='#{article_current.image3_url}')
 							img.img-card(src='#{article_current.image4_url}')
 							img.img-card(src='#{article_current.image5_url}')
-						p#article-type.hidden
+						p#article-type
 							= article_current.blog_or_news
+						p
+							|blog or news
+						p#article-language
+							= article_current.language
+						p
+							|language
