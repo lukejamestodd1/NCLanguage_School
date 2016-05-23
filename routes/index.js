@@ -122,7 +122,7 @@ router.get('/english', function (req, res) {
                 update4: updates[2],
                 article1: articles[articles.length - 1],
                 article2: articles[articles.length - 2],
-                title: "New Century School", subtitle: "Chinese language and learning centre"
+                title: "New Century School", subtitle: "Language School and Learning Centre"
             });
         });
     });
@@ -173,7 +173,47 @@ router.get('/english/blog', function(req, res) {
 });
 
 router.get('/english/contact', function(req, res) {
-    res.render('english_contact', { title: "Contact", msg: "Send a message"});
+    res.render('english_contact', { title: "Contact Us", msg: "Send a message"});
+});
+
+// Email functionality for English
+router.post('/english/contact', function(req, res) {
+  //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
+  var smtpTrans = nodemailer.createTransport('SMTP', {
+    service: 'Gmail',
+    auth: {
+        user: "yang.j.li91@gmail.com",
+        pass: "gbbtgeyveafdhvou"
+    }
+  });
+  //Mail options
+  var mailOpts = {
+    from: "yang.j.li91@gmail.com",//grab form data from the request body object
+    to: 'lukejamestodd1@gmail.com',
+    subject: 'Website contact form',
+    html: 'From ' + req.body.nm + '<br><br>' + req.body.email + '<br><br>' + req.body.ph_num + '<br><br>' + req.body.message
+  };
+
+  //Checking for completion
+  if (!req.body.nm || !req.body.email || !req.body.message) {
+    res.render('english_contact', {title: 'Contact Us', msg: 'Please include a name and email.', err: true, page: 'english/contact' })
+  //Honey pot spam rejection
+  } else if (req.body.spampot) {
+    res.render('english_contact', {title: 'Contact Us', msg: 'You are a spam bot.', err: true, page: 'english/contact' })
+  }
+
+  //Error msging
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+    //Email not sent
+    if (error) {
+        console.log(error);
+        res.render('english_contact', { title: 'Contact Us', msg: 'Error occured - please call 9802 9998.', err: true, page: 'english/contact' })
+    }
+    //Yay!! Email sent
+    else {
+        res.render('english_contact', { title: 'Contact Us', msg: 'Message sent! Thank you.', err: false, page: 'english/contact' })
+    }
+  });
 });
 
 //============= ADMINSTRATION ROUTES ============ //
