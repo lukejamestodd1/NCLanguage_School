@@ -16,17 +16,14 @@ block content
                         -else
                           p News Article
                         p
-                          = article.blog_or_news
-                        p
                         -if(article.language == '0,1')
                           p English
                         -else
                           p Chinese
-                        p
-                          = article.language
                         a(href='/articles/#{article._id}/edit') Edit
                         a(href='/articles/#{article._id}') Show full
                         form(action='/articles/#{article._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
                           input(type='hidden',value='DELETE',name='_method')
                           button(type='submit').
                             Delete
+                .divider

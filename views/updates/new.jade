@@ -3,6 +3,8 @@ extends ../admin_layout
 block content
 	form#formAddUpdate.margined(name="addupdate",method="post",action="/updates")
 		.form-group
+			p Title:
+                input#inputTitle(type="text", placeholder="enter title", name="title")
 			p
 				label(for='content') Content:
 				textarea.form-control#inputText(rows='9' placeholder="type text here", name="text")

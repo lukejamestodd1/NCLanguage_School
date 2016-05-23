@@ -1,7 +1,7 @@
-extends ../layout
+extends ../admin_layout
 
 block content
-    h1.
-        Infophoto #{update._id}
-    p Text: #{update.text}
-    
+		h3 Title:
+			= update.title
+		p Text:
+			= update.text

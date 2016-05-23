@@ -50,11 +50,11 @@ router.route('/')
     .post(function(req, res) {
         if (req.user) {
           // Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
-     
+          var title = req.body.title;
           var text = req.body.text;
           //call the create function for our database
           mongoose.model('Update').create({
-     
+              title : title,
               text : text
              
           }, function (err, update) {
@@ -189,13 +189,14 @@ router.get('/:id/edit', function(req, res) {
 //PUT to update a update by ID
 router.put('/:id/edit', function(req, res) {
     // Get our REST or form values. These rely on the "name" attributes
+    var title = req.body.title;
     var text = req.body.text;
     
    //find the document by ID
         mongoose.model('Update').findById(req.id, function (err, update) {
             //update it
             update.update({
-                
+                title : title,
                 text : text
 
 					 }, function (err, updateID) {
