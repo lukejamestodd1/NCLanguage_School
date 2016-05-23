@@ -270,3 +270,6 @@ footer.page-footer {
 .hidden{
   display: none;
 }
+.container{
+  width: 90%;
+}
