@@ -183,7 +183,7 @@ footer.page-footer {
   margin-right: 10%;
 }
 .article-item > h3 {
-  font-size: 4.5vw;
+  font-size: 3vw;
 }
 .article-item > p {
   text-align: justify;
@@ -202,6 +202,8 @@ footer.page-footer {
 .card-holder {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }
 .card {
   margin: 2vw;
@@ -209,7 +211,7 @@ footer.page-footer {
 }
 .img-card {
   margin: 2vw;
-  width: 44%;
+  width: 40%;
   height: 25%;
 }
 .article-item-list {
@@ -276,5 +278,3 @@ footer.page-footer {
 .margin70{
   width: 70%;
 }
-
-/* Article view section */

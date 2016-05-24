@@ -15,10 +15,11 @@ block content
 						span
 							p#date
 								= article.date
-						p
-							!{article.text}
-							br
-							br
+						.article-content
+							p
+								!{article_current.text}
+								br
+								br
 						.card-holder
 							img.img-card(src='#{article.image2_url}')
 							img.img-card(src='#{article.image3_url}')
