@@ -204,15 +204,17 @@ footer.page-footer {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
+  height: 50%;
 }
 .card {
   margin: 2vw;
   width: 44%;
+  height: 40%;
 }
 .img-card {
   margin: 2vw;
   width: 40%;
-  height: 25%;
+  height: 40%;
 }
 .article-item-list {
   display: flex;
@@ -267,7 +269,7 @@ footer.page-footer {
   margin-top: 2vw;
 }
 .index-news{
-  height: 17em;
+  height: 30%;
 }
 .hidden{
   display: none;
