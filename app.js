@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mime = require('mime');
+// var mime = require('mime');
 
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
@@ -41,7 +41,7 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
-mime.define({'image/jpg': ['jpg', 'JPG']});
+// mime.define({'image/jpeg': ['jpeg', 'JPG']});
 app.use(express.static(path.join(__dirname, 'public')));
 
 
