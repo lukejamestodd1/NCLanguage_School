@@ -41,8 +41,8 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(express.static(path.join(__dirname, 'public')));
 mime.define({'image/jpg': ['jpg']});
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', routes);
