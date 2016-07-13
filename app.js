@@ -40,9 +40,8 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
-express.static.mime.define({'image/jpg': ['jpg']});
 app.use(express.static(path.join(__dirname, 'public')));
-
+express.static.mime.define({'image/jpg': ['jpg']});
 
 
 app.use('/', routes);
