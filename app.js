@@ -41,7 +41,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, 'public')));
-express.static.mime.define({'image/jpg': ['jpg']});
+express.static.mime.define({'image/jpg': ['.jpg']});
 
 
 app.use('/', routes);
