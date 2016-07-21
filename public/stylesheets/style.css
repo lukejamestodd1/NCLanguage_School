@@ -280,3 +280,19 @@ footer.page-footer {
 .margin70{
   width: 70%;
 }
+.m1{
+  margin-top: 1em;
+}
+.p2{
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.p2t{
+  padding-top: 2em;
+}
+.p2b{
+  padding-bottom: 2em;
+}
+.list{
+  padding-right: 10em;
+}
