@@ -118,8 +118,8 @@ router.get('/english', function (req, res) {
    mongoose.model('Update').find({title: /English/i}, function (err, updates){
         mongoose.model('Article').find({blog_or_news : '0,1', language : '0,1'},function (err, articles){
             res.render('english_index', {
-                update3: updates[0],
-                update4: updates[1],
+                update3: updates[1],
+                update4: updates[0],
                 article1: articles[articles.length - 1],
                 article2: articles[articles.length - 2],
                 title: "New Century School", subtitle: "Language School and Learning Centre"
