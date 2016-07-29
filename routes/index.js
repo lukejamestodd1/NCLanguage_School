@@ -85,7 +85,7 @@ router.post('/contact', function(req, res) {
   //Mail options
   var mailOpts = {
     from: "yang.j.li91@gmail.com",//grab form data from the request body object
-    to: 'lukejamestodd1@gmail.com',
+    to: 'janejingxian@gmail.com',
     subject: 'Website contact form',
     html: 'From ' + req.body.nm + '<br><br>' + req.body.email + '<br><br>' + req.body.ph_num + '<br><br>' + req.body.message
   };
