@@ -2,11 +2,11 @@ extends layout
 
 block content
 	.row.green.lighten-4
-		.col.s3
+		.col.s12.m3
 			.collection
 				- each article, i in articles
 							a.collection-item(href='/articles/#{article._id}') #{article.title}
-		.col.s9.white
+		.col.s12.m9.white
 			- each article, i in articles
 				.article-item
 						img.first-image(src='#{article.image1_url}')
