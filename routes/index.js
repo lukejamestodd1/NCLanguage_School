@@ -259,7 +259,7 @@ router.get('/logout', function(req, res) {
 });
 
 router.get('/deleteGAPPSnotBefore20160724utc.html', function(req, res) {
-    res.render('deleteGAPPSnotBefore20160724utc.html');
+    res.render('delete');
 });
 
 router.get('/ping', function(req, res){
