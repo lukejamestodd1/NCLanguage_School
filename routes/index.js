@@ -262,8 +262,6 @@ router.get('/deleteGAPPSnotBefore20160724utc.html', function(req, res) {
     res.render('deleteGAPPSnotBefore20160724utc.html');
 });
 
-deleteGAPPSnotBefore20160724utc.html
-
 router.get('/ping', function(req, res){
   console.log('working');
   res.status(200).send("pong!");
