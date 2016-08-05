@@ -3,13 +3,11 @@ extends ../admin_layout
 block content
     .margined
         ul
-            //- - each update, i in updates
-            - for (var i= updates.length-1, update = updates[i]; i--; update = updates[i]) {
+            - each update, i in updates
                 .article-item-list
                     h4
                         = update.title
                     .article-item-buttons
                         a(href='/updates/#{update._id}/') Show
                         a(href='/updates/#{update._id}/edit') Edit
-            - }
                 .divider

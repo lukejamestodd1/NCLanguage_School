@@ -4,7 +4,8 @@ block content
     p
       a.btn-lg.btn-primary.btn-centre(href='/articles/new') Add a New Article
     .margined
-            - each article, i in articles
+            //- - each article, i in articles
+            - for (var i= articles.length-1, article = articles[i]; i--; article = articles[i]) {
                 .article-item-list 
                   img.article-list-img(src='#{article.image1_url}')
                   h5
@@ -26,4 +27,5 @@ block content
                           input(type='hidden',value='DELETE',name='_method')
                           button(type='submit').
                             Delete
+              - }
                 .divider
