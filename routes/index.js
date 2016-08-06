@@ -12,8 +12,8 @@ router.get('/', function (req, res) {
     mongoose.model('Update').find({title: /Chinese/i}, function (err, updates){
         mongoose.model('Article').find({blog_or_news : '0,1', language : '0'},function (err, articles){
             res.render('index', {
-                update1: updates[0],
-                update2: updates[1],
+                update1: updates[1],
+                update2: updates[0],
                 article1: articles[articles.length - 1],
                 article2: articles[articles.length - 2],
                 title: "新世纪学校", subtitle: ""

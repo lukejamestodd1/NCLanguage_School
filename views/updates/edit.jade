@@ -4,7 +4,7 @@ block content
     form.margined(action='/updates/#{update._id}/edit',method='post',name='updateupdate',enctype='application/x-www-form-urlencoded')
         .form-group
             p Title:
-                input#inputTitle(type='text', value='#{update.title}', name='title')
+                input#inputTitle(type='text', value='#{update.title}', name='title', readonly)
             p
                 label(for='content') New content: 
                 textarea.form-control#inputText(type='text', value='#{update.text}', name='text' rows="9")
