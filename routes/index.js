@@ -189,7 +189,7 @@ router.post('/english/contact', function(req, res) {
   //Mail options
   var mailOpts = {
     from: "yang.j.li91@gmail.com",//grab form data from the request body object
-    to: 'lukejamestodd1@gmail.com',
+    to: 'info@newcenturyschool.com.au',
     subject: 'Website contact form',
     html: 'From ' + req.body.nm + '<br><br>' + req.body.email + '<br><br>' + req.body.ph_num + '<br><br>' + req.body.message
   };
