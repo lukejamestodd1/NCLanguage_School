@@ -10,7 +10,7 @@ var nodemailer = require('nodemailer');
 router.get('/', function (req, res) {
 
     mongoose.model('Update').find({title: /Chinese/i}, function (err, updates){
-        mongoose.model('Article').find({blog_or_news : '0,1', language : '0'}).sort({'title': -1}).exec(function (err, articles){
+        mongoose.model('Article').find({blog_or_news : '0,1', language : '0'}).sort({'_id': -1}).exec(function (err, articles){
             res.render('index', {
                 update1: updates[0],
                 update2: updates[1],
@@ -48,7 +48,7 @@ router.get('/campuses/learning', function(req, res) {
 });
 
 router.get('/news', function(req, res) {
-    mongoose.model('Article').find({blog_or_news : '0,1', language : '0'}, function (err, articles){
+    mongoose.model('Article').find({blog_or_news : '0,1', language : '0'}).sort({'_id': -1}).exec(function (err, articles){
             res.render('news', {
                 articles: articles.reverse(),
                 article_latest: articles[0],
