@@ -22,12 +22,11 @@ router.route('/')
     .get(function(req, res, next) {
         if (req.user) {
           //retrieve all articles from Monogo
-          mongoose.model('Article').find({}, function (err, articles) {
+          mongoose.model('Article').find({sort: {'_id': -1}}, function (err, articles) {
                 if (err) {
                     return console.error(err);
                 } else {
                     //respond to both HTML and JSON. JSON responses require 'Accept: application/json;' in the Request Header
-
                     res.format({
                         //HTML response will render the index.jade file in the views/articles folder. We are also setting "articles" to be an accessible variable in our jade view
                       html: function(){
@@ -108,7 +107,7 @@ router.get('/new', function(req, res) {
   } else {
     res.redirect('/');
   }
-    
+
 });
 
 // route middleware to validate :id
