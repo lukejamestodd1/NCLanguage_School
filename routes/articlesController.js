@@ -22,7 +22,7 @@ router.route('/')
     .get(function(req, res, next) {
         if (req.user) {
           //retrieve all articles from Monogo
-          mongoose.model('Article').find({}).sort({'title': -1}).exec(function (err, articles) {
+          mongoose.model('Article').find({}).sort({'_id': 1}).exec(function (err, articles) {
                 if (err) {
                     return console.error(err);
                 } else {
@@ -144,7 +144,7 @@ router.param('id', function(req, res, next, id) {
 router.route('/:id')
   .get(function(req, res) {
     mongoose.model('Article').findById(req.id, function (err, article) {
-      mongoose.model('Article').find({blog_or_news : article.blog_or_news, language : article.language}, function (err, articles) {
+      mongoose.model('Article').find({blog_or_news : article.blog_or_news, language : article.language}).sort({'_id': 1}).exec(function (err, articles) {
       if (err) {
         console.log('GET Error: There was a problem retrieving: ' + err);
       } else {
