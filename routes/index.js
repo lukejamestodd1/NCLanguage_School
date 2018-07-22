@@ -23,29 +23,28 @@ router.get('/', function (req, res) {
 });
 
 router.get('/enrol', function(req, res) {
-    res.redirect('/enrol/language');
-});
-
-router.get('/enrol/language', function(req, res) {
     res.render('enrol_language', { title: "中文学校报名"});
 });
 
-router.get('/enrol/learning', function(req, res) {
-    res.render('enrol_learning', { title: "教育中心报名"});
-});
+// router.get('/enrol/language', function(req, res) {
+//     res.render('enrol_language', { title: "中文学校报名"});
+// });
+
+// router.get('/enrol/learning', function(req, res) {
+//     res.render('enrol_learning', { title: "教育中心报名"});
+// });
 
 router.get('/campuses', function(req, res) {
-    //res.render('campuses', { title: "Campuses - Chinese"});
-    res.redirect('/campuses/language');
-});
-
-router.get('/campuses/language', function(req, res) {
     res.render('campuses_language', { title: "中文学校分校"});
 });
 
-router.get('/campuses/learning', function(req, res) {
-    res.render('campuses_learning', { title: "教育中心分校"});
-});
+// router.get('/campuses/language', function(req, res) {
+//     res.render('campuses_language', { title: "中文学校分校"});
+// });
+
+// router.get('/campuses/learning', function(req, res) {
+//     res.render('campuses_learning', { title: "教育中心分校"});
+// });
 
 router.get('/news', function(req, res) {
     mongoose.model('Article').find({blog_or_news : '0,1', language : '0'}).sort({'_id': 1}).exec(function (err, articles){
@@ -129,28 +128,28 @@ router.get('/english', function (req, res) {
 });
 
 router.get('/english/enrol', function(req, res) {
-    res.redirect('/english/enrol/language');
-});
-
-router.get('/english/enrol/language', function(req, res) {
     res.render('english_enrol_language', { title: "Language Courses"});
 });
 
-router.get('/english/enrol/learning', function(req, res) {
-    res.render('english_enrol_learning', { title: "Learning Centre"});
-});
+// router.get('/english/enrol/language', function(req, res) {
+//     res.render('english_enrol_language', { title: "Language Courses"});
+// });
+
+// router.get('/english/enrol/learning', function(req, res) {
+//     res.render('english_enrol_learning', { title: "Learning Centre"});
+// });
 
 router.get('/english/campuses', function(req, res) {
-    res.redirect('/english/campuses/language');
-});
-
-router.get('/english/campuses/language', function(req, res) {
     res.render('english_campuses_language', { title: "Language Program Locations"});
 });
 
-router.get('/english/campuses/learning', function(req, res) {
-    res.render('english_campuses_learning', { title: "Learning Centre Locations"});
-});
+// router.get('/english/campuses/language', function(req, res) {
+//     res.render('english_campuses_language', { title: "Language Program Locations"});
+// });
+
+// router.get('/english/campuses/learning', function(req, res) {
+//     res.render('english_campuses_learning', { title: "Learning Centre Locations"});
+// });
 
 router.get('/english/news', function(req, res) {
     mongoose.model('Article').find({blog_or_news : '0,1',language : '0,1'}).sort({'_id': 1}).exec(function (err, articles){
