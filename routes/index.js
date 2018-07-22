@@ -122,7 +122,7 @@ router.get('/english', function (req, res) {
                 update4: updates[1],
                 article1: articles[articles.length - 1],
                 article2: articles[articles.length - 2],
-                title: "New Century School", subtitle: "Language School and Learning Centre"
+                title: "New Century School", subtitle: "Chinese Language Classes"
             });
         });
     });
