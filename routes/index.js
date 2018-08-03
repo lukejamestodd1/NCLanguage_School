@@ -217,21 +217,21 @@ router.post('/english/contact', function(req, res) {
 
 //============= ADMINSTRATION ROUTES ============ //
 
-router.get('/register', function(req, res) {
-    res.render('register', { });
-});
+// router.get('/register', function(req, res) {
+//     res.render('register', { });
+// });
 
-router.post('/register', function(req, res) {
-    Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
-        if (err) {
-            return res.render('register', { account : account });
-        }
+// router.post('/register', function(req, res) {
+//     Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
+//         if (err) {
+//             return res.render('register', { account : account });
+//         }
 
-        passport.authenticate('local')(req, res, function () {
-            res.redirect('/admin');
-        });
-    });
-});
+//         passport.authenticate('local')(req, res, function () {
+//             res.redirect('/admin');
+//         });
+//     });
+// });
 
 router.get('/albert', function(req, res) {
     res.render('login', { user : req.user });
