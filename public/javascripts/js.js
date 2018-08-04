@@ -4,7 +4,7 @@ $('#whButton').on('click', function(){
   $('.mapspace').css("display", "none");
   $('#WH').css("display", "block");
   initMap();
-  $('.btn-large').css("background-color", "#26a69a");
+  $('.btn-large').css("background-color", "#B71C1C");
   $('#whButton').css("background-color", "#2196F3");
 });
 
@@ -14,7 +14,7 @@ $('#temButton').on('click', function(){
   $('.mapspace').css("display", "none");
   $('#Tem').css("display", "block");
   initMap();
-  $('.btn-large').css("background-color", "#26a69a");
+  $('.btn-large').css("background-color", "#B71C1C");
   $('#temButton').css("background-color", "#2196F3");
 });
 
@@ -24,7 +24,7 @@ $('#ashButton').on('click', function(){
   $('.mapspace').css("display", "none");
   $('#Ash').css("display", "block");
   initMap();
-  $('.btn-large').css("background-color", "#26a69a");
+  $('.btn-large').css("background-color", "#B71C1C");
   $('#ashButton').css("background-color", "#2196F3");
 });
 
@@ -34,7 +34,7 @@ $('#donButton').on('click', function(){
   $('.mapspace').css("display", "none");
   $('#Don').css("display", "block");
   initMap();
-  $('.btn-large').css("background-color", "#26a69a");
+  $('.btn-large').css("background-color", "#B71C1C");
   $('#donButton').css("background-color", "#2196F3");
 });
 
@@ -44,6 +44,6 @@ $('#hawButton').on('click', function(){
   $('.mapspace').css("display", "none");
   $('#Haw').css("display", "block");
   initMap();
-  $('.btn-large').css("background-color", "#26a69a");
+  $('.btn-large').css("background-color", "#B71C1C");
   $('#hawButton').css("background-color", "#2196F3");
 });
