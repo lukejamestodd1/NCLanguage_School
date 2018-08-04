@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
                 update2: updates[1],
                 article1: articles[articles.length - 1],
                 article2: articles[articles.length - 2],
-                title: "新世纪学校", subtitle: ""
+                title: "新世纪中文学校", subtitle: ""
             });
         });
     });
@@ -121,14 +121,14 @@ router.get('/english', function (req, res) {
                 update4: updates[1],
                 article1: articles[articles.length - 1],
                 article2: articles[articles.length - 2],
-                title: "New Century School", subtitle: "Chinese Language Classes"
+                title: "New Century Chinese Language School", subtitle: ""
             });
         });
     });
 });
 
 router.get('/english/enrol', function(req, res) {
-    res.render('english_enrol_language', { title: "Language Courses"});
+    res.render('english_enrol_language', { title: "About Us"});
 });
 
 // router.get('/english/enrol/language', function(req, res) {
