@@ -5,7 +5,7 @@ $('#whButton').on('click', function(){
   $('#WH').css("display", "block");
   initMap();
   $('.btn-large').css("background-color", "#B71C1C");
-  $('#whButton').css("background-color", "#2196F3");
+  $('#whButton').css("background-color", "#946020");
 });
 
 $('#temButton').on('click', function(){
@@ -15,7 +15,7 @@ $('#temButton').on('click', function(){
   $('#Tem').css("display", "block");
   initMap();
   $('.btn-large').css("background-color", "#B71C1C");
-  $('#temButton').css("background-color", "#2196F3");
+  $('#temButton').css("background-color", "#946020");
 });
 
 $('#ashButton').on('click', function(){
@@ -25,7 +25,7 @@ $('#ashButton').on('click', function(){
   $('#Ash').css("display", "block");
   initMap();
   $('.btn-large').css("background-color", "#B71C1C");
-  $('#ashButton').css("background-color", "#2196F3");
+  $('#ashButton').css("background-color", "#946020");
 });
 
 $('#donButton').on('click', function(){
@@ -35,7 +35,7 @@ $('#donButton').on('click', function(){
   $('#Don').css("display", "block");
   initMap();
   $('.btn-large').css("background-color", "#B71C1C");
-  $('#donButton').css("background-color", "#2196F3");
+  $('#donButton').css("background-color", "#946020");
 });
 
 $('#hawButton').on('click', function(){
@@ -45,5 +45,5 @@ $('#hawButton').on('click', function(){
   $('#Haw').css("display", "block");
   initMap();
   $('.btn-large').css("background-color", "#B71C1C");
-  $('#hawButton').css("background-color", "#2196F3");
+  $('#hawButton').css("background-color", "#946020");
 });
